@@ -5,36 +5,113 @@
     src: url('fonts/NicoMoji-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
+}
 
-    body {
-        font-family: 'Arial', sans-serif;
-    }
+body {
+    font-family: 'Nico Moji', sans-serif;
+    padding: 0;
+    margin: 0;
 }
 
 /*--- Header-Nav ---*/
 
+.header {
+    position: relative;
+}
+
 .header-img {
     width: 100%;
     height: auto;
-    position: relative;
     background-size: cover;
     background-position: center;
+    display: block;
 }
+
+.header-content {
+    position: relative;
+    width: 100%;
+}
+
 
 .header-icon {
     position: absolute;
-    left: 100px;
-    width: 350px;
+    left: 5%;
+    top: 0;
+    width: 20%;
     height: auto;
+    max-width: 350px;
 }
 
-.btn-Startseite {
+.nav-container {
     position: absolute;
-    top: 125px;
-    right: 130px;
+    top: 12%;
+    right: 5%;
+    display: flex;
+    gap: 6.25em;
+    align-items: center;
+    flex-wrap: wrap;
+    width: auto;
+    max-width: 1149px;
+}
+
+.nav-container a {
     text-decoration: none;
     background-color: #234412;
     color: #FCC872;
-    padding: 10px;
-    font-size: 35px;
+    border-radius: 1.5625em;
+    padding: 0.5625em 0.9375em 0.625em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5625em;
+    box-shadow: 0px 0.3125em 0.4375em rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s;
+}
+
+.nav-container a:hover {
+    background-color: #FCC872;
+    color: #234412;
+    transform: scale(1.05);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.9);
+}
+
+/*--- Media Queries ---*/
+
+/* Media Query für Bildschirme unter 1600px */
+
+@media (max-width: 1600px) {
+    .nav-container a {
+        font-size: 1.25em;
+        padding: 0.4em 0.75em 0.5em;
+    }
+
+    .nav-container {
+        gap: 4em;
+    }
+}
+
+/* Media Query für Bildschirme unter 1200px */
+
+@media (max-width: 1200px) {
+    .nav-container a {
+        font-size: 1.1em;
+        padding: 0.35em 0.55em 0.45em;
+    }
+
+    .nav-container {
+        gap: 2em;
+    }
+}
+
+/* Media Query für Bildschirme unter 950px */
+
+@media (max-width: 950px) {
+    .nav-container a {
+        font-size: 0.95em;
+        padding: 0.29em 0.49em 0.39em;
+    }
+
+    .nav-container {
+        gap: 1.3em;
+    }
 }
