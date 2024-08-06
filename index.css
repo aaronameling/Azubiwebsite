@@ -1,0 +1,40 @@
+/*--- Global ---*/
+
+@font-face {
+    font-family: "Nico Moji";
+    src: url('fonts/NicoMoji-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+    body {
+        font-family: 'Arial', sans-serif;
+    }
+}
+
+/*--- Header-Nav ---*/
+
+.header-img {
+    width: 100%;
+    height: auto;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+}
+
+.header-icon {
+    position: absolute;
+    left: 100px;
+    width: 350px;
+    height: auto;
+}
+
+.btn-Startseite {
+    position: absolute;
+    top: 125px;
+    right: 130px;
+    text-decoration: none;
+    background-color: #234412;
+    color: #FCC872;
+    padding: 10px;
+    font-size: 35px;
+}
