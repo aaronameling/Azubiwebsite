@@ -103,15 +103,64 @@ body {
     }
 }
 
-/* Media Query für Bildschirme unter 950px */
+/* Media Query für Bildschirme unter 1024px */
 
-@media (max-width: 950px) {
+@media (max-width: 1024px) {
     .nav-container a {
-        font-size: 0.95em;
-        padding: 0.29em 0.49em 0.39em;
+        font-size: 0.92em;
+        padding: 0.29em 0.em 0.39em;
     }
 
     .nav-container {
         gap: 1.3em;
     }
 }
+
+/* Media Query für Bildschirme unter 768px */
+
+@media (max-width: 768px) {
+    .nav-container a {
+        font-size: 0.76em;
+        padding: 0.2em 0.4em 0.3em;
+    }
+
+    .nav-container {
+        gap: 0.9em;
+    }
+}
+
+/* Media Query für Bildschirme unter 580px */
+
+@media (max-width: 580px) {
+    .nav-container {
+        display: none;
+        flex-direction: column;
+        width: 6em;
+        top: 6em;
+        right: 2em;
+    }
+
+    .nav-container a {
+        padding: 0.3em 0.15em;
+        text-align: center;
+        width: 100%;
+    }
+
+    dropdown-btn {
+        display: block;
+        position: absolute;
+        top: 1em;
+        right: 1em;
+        width: auto;
+        background-color: #FCC872;
+        font-size: 1.5em;
+        border: none;
+        padding: 0.5em;
+        cursor: pointer;
+        z-index: 1000;
+    }
+}
+/*--- Standard Dropdown-Button ausblenden ---*/
+    /*.dropdown-btn {
+        display: none;*/
+
