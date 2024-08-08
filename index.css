@@ -32,7 +32,6 @@ body {
     width: 100%;
 }
 
-
 .header-icon {
     position: fixed;
     left: 5%;
@@ -77,6 +76,75 @@ body {
 
 .dropdown-btn {
     display: none;
+}
+
+.willkommen-container {
+    height: 22em;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    width: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
+    padding: 1em;
+    background-color: rgba(255, 247, 175, 0.65);
+    color: black;
+    border-radius: 0.625em;
+}
+
+.willkommen-container-btn {
+    display: flex;
+    gap: 4em;
+    justify-content: center;
+}
+
+.willkommen-h2 {
+    font-size: 3rem;
+}
+
+.willkommen-p {
+    font-size: 2.5rem;
+
+}
+
+.btn-ZumShop {
+    text-decoration: none;
+    background-color: #234412;
+    color: #FCC872;
+    border-radius: 1.5625em;
+    padding: 0.5625em 0.9375em 0.625em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    box-shadow: 0px 0.3125em 0.4375em rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s;
+}
+
+.btn-ZumShop:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.9);
+}
+
+.btn-mehrZuPokeMart {
+    text-decoration: none;
+    background-color: none;
+    color: #234412;
+    border-radius: 1.5625em;
+    border: 4px solid #234412;
+    padding: 0.5625em 0.9375em 0.625em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    box-shadow: 0px 0.3125em 0.4375em rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s;
+}
+
+.btn-mehrZuPokeMart:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.9);
 }
 
 /*--- Media Queries ---*/
@@ -147,8 +215,8 @@ body {
     .nav-container {
         display: none;
         flex-direction: column;
-        width: 10em;
-        top: 6em;
+        width: 5em;
+        top: 4.5em;
         right: 2em;
     }
 
@@ -157,9 +225,11 @@ body {
     }
 
     .nav-container a {
-        padding: 0.3em 0.15em;
+        padding: 0.3em 0.12em;
         text-align: center;
         width: 100%;
+        font-size: 0.5em;
+        gap: 0.5em;
     }
 
     .dropdown-btn {
