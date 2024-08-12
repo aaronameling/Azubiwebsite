@@ -182,18 +182,21 @@ body {
     width: 100%;
     height: auto;
     position: relative;
+    background-size: cover;
+    background-position: center;
 }
 
 .produkt-container {
     font-family: 'Acme', sans-serif;
     position: absolute;
     width: 100%;
-    top: 155em;
+    top: 240%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
     gap: 17%;
     justify-content: center;
+    z-index: 2;
 }
 
 .produkt-container a {
@@ -210,8 +213,6 @@ body {
     box-shadow: 0px 0.3125em 0.4375em rgba(0, 0, 0, 0.5);
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s;
 }
-
-
 
 /*---- Media Queries ----*/
 
