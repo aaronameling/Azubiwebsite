@@ -178,6 +178,11 @@ body {
 
 /* Produkt Bereich */
 
+.produkt-body {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
 .body-img {
     width: 100%;
     height: auto;
@@ -187,31 +192,66 @@ body {
 }
 
 .produkt-container {
-    font-family: 'Acme', sans-serif;
     position: absolute;
-    width: 100%;
-    top: 240%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
-    gap: 17%;
-    justify-content: center;
-    z-index: 2;
-}
-
-.produkt-container a {
-    position: absolute;
-    text-decoration: none;
-    background-color: #234412;
-    color: #FCC872;
-    border-radius: 1.5625em;
-    padding: 0.25em 0.5em 0.25em;
-    display: flex;
+    gap: 7%;
     align-items: center;
     justify-content: center;
-    font-size: 2em;
-    box-shadow: 0px 0.3125em 0.4375em rgba(0, 0, 0, 0.5);
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s;
+}
+
+.produkt-container div {
+    width: 35em;
+    height: 42em;
+    background-color: rgba(255, 255, 255, 0.7);
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border-radius: 0.625em;
+    text-align: center;
+}
+
+.rayquaza-img {
+    width: 97%;
+
+}
+
+.produktText-rayquaza {
+    text-align: center;
+    font-family: "Nico Moji";
+    font-size: 3.5em;
+    margin: 0em 0em 0em;
+}
+
+.produktText-Actionfigur {
+    font-family: "Nico Moji";
+    font-size: 2.7em;
+    margin: 0em 0em 0.5em;
+}
+
+.btn-jetztKaufen-1 {
+    font-family: Acme;
+    font-size: 2.5em;
+    text-decoration: none;
+    text-shadow:
+            -1px -1px 0 #000,
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000;
+    /*box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.5);*/
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.9);
+    color: #FCC872;
+    background-color: rgba(35, 68, 18, 0.7);
+    padding: 0.25em 0.5em 0.25em;
+    margin-top: 10px;
+    border-radius: 1.5625em;
+}
+
+.btn-jetztKaufen-1:hover {
+    background-color: rgba(35, 68, 18, 1);
+    transform: scale(1.1);
 }
 
 /*---- Media Queries ----*/
