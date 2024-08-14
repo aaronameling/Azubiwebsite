@@ -1,0 +1,29 @@
+
+
+/*----| Footer für css.index |----*/
+
+.footer-container {
+    width: 768px;
+    height: 270px;
+    background-color: #234412;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    font-family: Acme;
+    text-align: center;
+    padding-top: 6em;
+    letter-spacing: 0.15em;
+    line-height: 2em;
+}
+
+.footer-container .text1 {
+    font-size: 1.2em;
+    color: rgba(252, 200, 114, 1);
+}
+
+.footer-container .text2 {
+    font-size: 1.5em;
+    color: rgba(252, 200, 114, 0.6);
+}
+
