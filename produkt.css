@@ -1,0 +1,249 @@
+
+/*---- Global ----*/
+
+@font-face {
+    font-family: "Nico Moji";
+    src: url('fonts/NicoMoji-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Acme";
+    src: url('fonts/Acme-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+/*---- Header ----*/
+
+
+.headerNav-container {
+    position: relative;
+    background-color: #234412;
+    background-image: url("./img/Hintergrund Landschaft.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 54%;
+    box-shadow: 0px 0.3125em 0.4375em rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 33vh;
+}
+
+.headerNav-icon {
+    position: absolute;
+    width: 16%;
+    height: auto;
+    top: 15%;
+    left: 5%;
+    display: block;
+}
+
+.headerNav-button {
+    font-family: "Nico Moji";
+    position: absolute;
+    width: auto;
+    top: 30%;
+    right: 6%;
+    display: flex;
+    gap: 6em;
+    align-items: center;
+}
+
+.headerNav-button a {
+    text-decoration: none;
+    font-size: 1.2em;
+    color: #234412;
+    background-color: #FFF7AF;
+    border-radius: 1.5625em;
+    padding: 0.5625em 0.9375em 0.625em;
+    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.7);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.headerNav-button a:hover {
+    transform: scale(1.1);
+}
+
+/*---- Body ----*/
+
+.produkt-container {
+    width: 100%;
+    height: 330vh;
+    background-color: #FCC872;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.produktSuch-leiste {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    font-family: "Nico Moji";
+    color: #234412;
+}
+
+.sortier-select {
+    width: 30.5%;
+    margin: 9% 0 0 0;
+    display: flex;
+    align-items: center;
+    right: 0;
+    position: absolute;
+    gap: 1em;
+}
+
+.sortier-select span {
+    margin: 2% 0 0 2%;
+    font-size: 0.7em;
+}
+
+.produkt-h1 {
+    font-size: 3em;
+    margin: 9% 0 0 6%;
+}
+
+.produkt-p {
+    margin: 2% 0 0 0%;
+    justify-content: right;
+}
+
+#sortieren {
+    margin: 2% 0 0 0%;
+    font-family: "Nico Moji";
+    font-size: 0.8em;
+    color: #234412;
+    background-color: #FFF7AF;
+    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.7);
+    height: 2.5em;
+    border: none;
+    justify-content: right;
+}
+
+.produkt-underline {
+    width: 88%;
+    margin: 0.25% 0 0 6%;
+    height: 0.153em;
+    background-color: #234412;
+    position: absolute;
+}
+
+.produkt-boxen {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8%;
+    justify-content: center;
+    margin: 9% 0 0 0;
+}
+
+.produkt-boxen > div {
+    width: 21%;
+    height: 36em;
+    background-color: #FFF7AF;
+    border-radius: 0.625em;
+    justify-content: center;
+    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.7);
+    font-family: "Acme";
+}
+
+.produkt-item {
+   text-align: center;
+}
+
+.produkt-img {
+    width: 95%;
+    display: inline-block;
+    padding-top: 0.5em;
+}
+
+.produkt-img:hover {
+    transform: scale(1.2);
+}
+
+
+.imgBox-underline {
+    width: 21%;
+    height: 0.153em;
+    background-color: #FCC872;
+    position: absolute;
+    margin-top: 1.5em;
+    box-shadow: 0em 0.1em 0.1em 0em rgba(0, 0, 0, 0.4);
+}
+
+.produkt-name {
+    font-size: 1.6em;
+    color: #234412;
+    margin: 1.5em 0 0 0.5em;
+    letter-spacing: 0.05em;
+    text-align: left;
+}
+
+.produkt-info-box {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    align-content: space-between;
+    flex-wrap: wrap;
+    text-align: left;
+    margin-top: 1em;
+    margin-left: 0.8em;
+}
+
+.produkt-info {
+    color: #234412;
+    letter-spacing: 0.02em;
+    font-size: 1.3em;
+}
+
+.ansehen-button {
+    margin-left: 1em;
+    text-decoration: none;
+    color: #234412;
+    border-radius: 1.5625em;
+    padding: 0.4em 0.9375em 0.4em;
+    border: 0.05em solid #234412;
+    letter-spacing: 0.02em;
+    font-size: 1.2em;
+}
+
+.ansehen-button:hover {
+    color: #FFF7AF;
+    background-color: #234412;
+    transform: scale(1.05);
+}
+
+/*--- Footer ---*/
+
+.produkt-underline-footer {
+    width: 88%;
+    margin: 9% 0 0 9%;
+    height: 0.153em;
+    background-color: #234412;
+    position: absolute;
+}
+
+.footer-container {
+    display: block;
+    margin-top: 18%;
+    margin-bottom: 18%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, 50%);
+    color: #234412;
+    font-size: 3em;
+    font-family: Acme;
+}
+
+.footer-container .text1 {
+    color: rgb(35, 68, 18, 1);
+}
+
+.footer-container .text2 {
+    color: rgb(35, 68, 18, 0.6);
+}
