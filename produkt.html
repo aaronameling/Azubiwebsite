@@ -37,6 +37,7 @@
             <span class="sortier-select">
                 <span class="sortieren-text">sortieren nach</span>
                 <select name="sortieren" id="sortieren">
+                    <option value="standart" selected>Standart</option>
                     <optgroup label="rich">
                         <option value="preis-hoch-niedrig"> Preis, hoch nach niedrig</option>
                     </optgroup>
@@ -50,35 +51,35 @@
 
 <!-- Produkte 1 -->
 
-        <div class="produkt-boxen">
+        <div class="produkt-boxen" id="produkt-boxen">
 
         <!-- Dragoran -->
 
-            <div class="produkt-item">
+            <div class="produkt-item" data-preis="39.98" data-index="1">
                 <img class="produkt-img" src="img/Dragoran Actionfigur.png" alt="Dragoran Produkt IMG">
                 <div class="imgBox-underline"></div>
                 <h2 class="produkt-name">Dragoran&nbsp;&nbsp;&nbsp;Actionfigur</h2>
                 <span class="produkt-info-box">
-                    <p class="produkt-info">39,99€<br>(inkl.MwSt.)</p>
+                    <p class="produkt-info">39,98€<br>(inkl.MwSt.)</p>
                     <a href="" class="ansehen-button">Produkt&nbsp;&nbsp;&nbsp;Ansehen</a>
                 </span>
             </div>
 
         <!-- Dragonier -->
 
-            <div class="produkt-item">
+            <div class="produkt-item" data-preis="17.99" data-index="2">
                 <img class="produkt-img" src="img/Dragonir Kuscheltier.png" alt="Dragonir Produkt IMG">
                 <div class="imgBox-underline"></div>
                 <h2 class="produkt-name">Dragonir&nbsp;&nbsp;&nbsp;Kuscheltier</h2>
                 <span class="produkt-info-box">
-                    <p class="produkt-info">16,99€<br>(inkl.MwSt.)</p>
+                    <p class="produkt-info">17,99€<br>(inkl.MwSt.)</p>
                     <a href="" class="ansehen-button">Produkt&nbsp;&nbsp;&nbsp;Ansehen</a>
                 </span>
             </div>
 
         <!-- Dratini -->
 
-            <div class="produkt-item">
+            <div class="produkt-item" data-preis="16.99" data-index="3">
                 <img class="produkt-img" src="img/Dratini Kuscheltier.png" alt="Dratini Produkt IMG">
                 <div class="imgBox-underline"></div>
                 <h2 class="produkt-name">Dratini&nbsp;&nbsp;&nbsp;Kuscheltier</h2>
@@ -91,11 +92,11 @@
 
 <!-- Produkte 2 -->
 
-        <div class="produkt-boxen">
+        <div class="produkt-boxen" id="produkt-boxen">
 
             <!-- Superball -->
 
-            <div class="produkt-item">
+            <div class="produkt-item" data-preis="9.99" data-index="4">
                 <img class="produkt-img" src="img/Superball.png" alt="Superball Produkt IMG">
                 <div class="imgBox-underline"></div>
                 <h2 class="produkt-name">Superball</h2>
@@ -107,7 +108,7 @@
 
             <!-- Mewtwo -->
 
-            <div class="produkt-item">
+            <div class="produkt-item" data-preis="39.99" data-index="5">
                 <img class="produkt-img" src="img/Mewtwo Actionfigur.png" alt="Mewtwo Produkt IMG">
                 <div class="imgBox-underline"></div>
                 <h2 class="produkt-name">Mewtwo&nbsp;&nbsp;&nbsp;Actionfigur</h2>
@@ -119,12 +120,12 @@
 
             <!-- Mew -->
 
-            <div class="produkt-item">
+            <div class="produkt-item" data-preis="16.98" data-index="6">
                 <img class="produkt-img" src="img/Mew Kuscheltier.png" alt="Mew Produkt IMG">
                 <div class="imgBox-underline"></div>
                 <h2 class="produkt-name">Mew&nbsp;&nbsp;&nbsp;Kuscheltier</h2>
                 <span class="produkt-info-box">
-                    <p class="produkt-info">16,99€<br>(inkl.MwSt.)</p>
+                    <p class="produkt-info">16,98€<br>(inkl.MwSt.)</p>
                     <a href="" class="ansehen-button">Produkt&nbsp;&nbsp;&nbsp;Ansehen</a>
                 </span>
             </div>
@@ -132,23 +133,23 @@
 
 <!-- Produkte 3 -->
 
-        <div class="produkt-boxen">
+        <div class="produkt-boxen" id="produkt-boxen">
 
             <!-- Lucario -->
 
-            <div class="produkt-item">
+            <div class="produkt-item" data-preis="37.99" data-index="7">
                 <img class="produkt-img" src="img/Lucario Actionfigur.png" alt="Lucario Produkt IMG">
                 <div class="imgBox-underline"></div>
                 <h2 class="produkt-name">Lucario&nbsp;&nbsp;&nbsp;Actionfigur</h2>
                 <span class="produkt-info-box">
-                    <p class="produkt-info">39,99€<br>(inkl.MwSt.)</p>
+                    <p class="produkt-info">37,99€<br>(inkl.MwSt.)</p>
                     <a href="" class="ansehen-button">Produkt&nbsp;&nbsp;&nbsp;Ansehen</a>
                 </span>
             </div>
 
             <!-- Shiny Glurak -->
 
-            <div class="produkt-item">
+            <div class="produkt-item" data-preis="19.99" data-index="8">
                 <img class="produkt-img" src="img/ShinyGlurak.png" alt="Shiny Glurak Produkt IMG">
                 <div class="imgBox-underline"></div>
                 <h2 class="produkt-name">Shiny Glurak&nbsp;&nbsp;&nbsp;Kuscheltier</h2>
@@ -160,7 +161,7 @@
 
             <!-- Rayquaza -->
 
-            <div class="produkt-item">
+            <div class="produkt-item" data-preis="49.99" data-index="9">
                 <img class="produkt-img" src="img/Rayquaza Actionfigur.png" alt="Rayquaza Produkt IMG">
                 <div class="imgBox-underline"></div>
                 <h2 class="produkt-name">Rayquaza&nbsp;&nbsp;&nbsp;Actionfigur</h2>
