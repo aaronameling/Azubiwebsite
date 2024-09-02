@@ -513,6 +513,8 @@ body {
 
     .headerNav-button a {
         font-size: 0.7em;
+        width: 100%;
+        text-align: center;
     }
 
     .sortieren-text {

@@ -31,7 +31,7 @@ body {
     background-position: 0 54%;
     box-shadow: 0px 0.3125em 0.4375em rgba(0, 0, 0, 0.5);
     width: 100%;
-    height: 18vh;
+    height: 12em;
 }
 
 .header-navIcon {
@@ -138,6 +138,10 @@ body {
     width: 80%;
 }
 
+.produktImg:hover {
+    transform: scale(1.3);
+}
+
 .kaufBox {
     width: 57%;
     height: 29em;
@@ -223,7 +227,7 @@ body {
 }
 
 #counter {
-    font-size: 2.5em;
+    font-size: 2em;
     margin: 0.3em 0 0 0;
     color: #234412;
 }
@@ -323,8 +327,8 @@ body {
 }
 
 .likeBTN {
-    width: 5em;
-    height: 5em;
+    width: 4.5em;
+    height: 4.5em;
     background-color: #FCC872;
     justify-content: center;
     display: flex;
@@ -341,6 +345,11 @@ body {
     display: flex;
     align-items: center;
     background-color: #FFF7AF;
+}
+
+.heartIMG {
+    width: auto;
+    height: 3em;
 }
 
 .beschreibungsBox {
@@ -365,7 +374,7 @@ body {
 
 .beschreibungP1 {
     font-family: "Nico Moji";
-    margin: 1.5em;
+    margin: 1.5em 3em 1.5em 3em;
     color: #234412;
     font-size: 1.1em;
 }
@@ -379,18 +388,656 @@ body {
 .boxP2 {
     width: 100%;
     height: 50%;
-    background-color: #eeee;
+    background-color: #FFF7AF;
     display: flex;
+    align-items: center;
+}
+
+.beschreibungP2 {
+    font-family: "Nico Moji";
+    margin: 1.5em 3em 1.5em 0em;
+    color: #234412;
+    font-size: 0.95em;
+    letter-spacing: 0.02em;
+}
+
+.ulP2 {
+    font-family: "Nico Moji";
+    margin: 0em 3em 1.5em 0;
+    color: #234412;
+    font-size: 0.95em;
+    letter-spacing: 0.02em;
+}
+
+.ulP2p {
+    font-size: 1.3em;
 }
 
 .boxP3 {
     width: 100%;
     height: 20%;
-    background-color: #eeee;
+    background-color: #FFF7AF;
     border-bottom-left-radius:  0.625em;
     border-bottom-right-radius:  0.625em;
     display: flex;
+    align-items: flex-start;
 }
 
+.beschreibungP3 {
+    font-family: "Nico Moji";
+    margin: 1.5em 3em 1.5em 3em;
+    color: #234412;
+    font-size: 1.1em;
+}
 
+/*---- Footer ----*/
+
+.footerContainer {
+    width: 100%;
+    height: 25vh;
+    background-color: #FCC872;
+}
+
+.footer {
+    background-color: #FCC872;
+    justify-content: center;
+    text-align: center;
+    font-size: 2em;
+    color: #234412;
+}
+
+.text2 {
+    font-size: 1.3em;
+    color: rgb(35, 68, 18, 0.5);
+}
+
+/*---- Media Queries ----*/
+
+/* Media Query für Bildschirme unter 1600px */
+
+@media (max-width: 1600px) {
+    .header-navContainer {
+        height: 10em;
+    }
+
+    .produktContainer {
+        height: 95em;
+    }
+
+    .produktBox {
+        width: 75%;
+        height: 30em;
+    }
+
+    .imgBox {
+        width: 32%;
+        height: 24em;
+    }
+
+    .kaufboxH2 {
+        font-size: 2.3em;
+        margin-top: 1.3em;
+    }
+
+    .kaufboxH3 {
+        font-size: 1.7em;
+    }
+
+    .kaufBox {
+        margin: 2.375em 2.375em 2.375em 29em;
+    }
+
+    .kaufboxP1 {
+        margin-top: 7.2em;
+    }
+
+    .minusBTN {
+        width: 3em;
+        height: 40%;
+    }
+
+    #minusBTN {
+        font-size: 1.5em;
+    }
+
+    #counter {
+        font-size: 1.8em;
+    }
+
+    .plusBTN {
+        width: 3em;
+        height: 40%;
+    }
+
+    #plusBTN {
+        font-size: 1.5em;
+    }
+
+    #warenkorbBTN {
+        font-size: 0.95em;
+    }
+
+    .paypalIMG {
+        width: auto;
+        height: 1.2em;
+    }
+
+    .likeBTN {
+        width: 4em;
+        height: 4em;
+    }
+
+    .heartIMG {
+        width: auto;
+        height: 2em;
+    }
+
+    .beschreibungP1 {
+        font-size: 1.05em;
+    }
+
+    .beschreibungP2 {
+        font-size: 0.85em;
+    }
+
+    .beschreibungP3 {
+        font-size: 1.05em;
+    }
+
+    .ulP2 {
+        font-family: "Nico Moji";
+        margin: 0em 3em 1.5em 0;
+        color: #234412;
+        font-size: 0.8em;
+        letter-spacing: 0.02em;
+    }
+
+    .ulP2p {
+        font-size: 1.3em;
+    }
+
+}
+
+/* Media Query für Bildschirme unter 1300px */
+
+@media (max-width: 1300px) {
+
+    .header-navContainer {
+        height: 11em;
+    }
+
+    .produktContainer {
+        height: 90em;
+    }
+
+    .produktBox {
+        width: 75%;
+        height: 25em;
+    }
+
+    .imgBox {
+        width: 32%;
+        height: 20em;
+    }
+
+    .kaufboxH2 {
+        font-size: 1.7em;
+        margin-top: 1.4em;
+    }
+
+    .kaufboxH3 {
+        font-size: 1.4em;
+    }
+
+    .kaufBox {
+        margin: 2.375em 2.375em 2.375em 24em;
+        height: 25em;
+    }
+
+    .kaufboxP1 {
+        margin-top: 7.2em;
+        font-size: 0.8em;
+    }
+
+    .kaufboxP2 {
+        margin: 0.7em 0 0 0.4em;
+        width: 5em;
+        font-size: 0.8em;
+    }
+
+    .minusBTN {
+        width: 3em;
+        height:30%;
+    }
+
+    #minusBTN {
+        font-size: 1.3em;
+    }
+
+    #counter {
+        font-size: 1.4em;
+    }
+
+    .plusBTN {
+        width: 3em;
+        height: 30%;
+    }
+
+    #plusBTN {
+        font-size: 1.3em;
+    }
+
+    .warenkorbBTN {
+        height: 1.9em;
+    }
+
+    #warenkorbBTN {
+        font-size: 0.75em;
+    }
+
+    .paypalBTN {
+        height: 1.9em;
+    }
+
+    .paypalIMG {
+        width: auto;
+        height: 1em;
+    }
+
+    .likeBTN {
+        width: 3em;
+        height: 3em;
+    }
+
+    .heartIMG {
+        width: auto;
+        height: 1.8em;
+    }
+
+    .footer {
+        font-size: 1.5em;
+        padding-top: 5%;
+    }
+
+    .text2 {
+        font-size: 1.3em;
+    }
+}
+
+/* Media Query für Bildschirme unter 1100px */
+
+@media (max-width: 1100px) {
+
+    .header-navContainer {
+        height: 6em;
+    }
+
+    .produktContainer {
+        height: 90em;
+    }
+
+    .kaufBox {
+        margin: 3em 3em 3em 17em;
+        height: 25em;
+    }
+
+    .header-navButton a {
+        font-size: 0.9em;
+    }
+
+    .produkt-h1 {
+        font-size: 2em;
+        margin: 3.6% 0 0 6%;
+    }
+
+    .kaufboxH2 {
+        font-size: 1.4em;
+        margin-top: 1.7em;
+    }
+
+    .kaufboxH3 {
+        font-size: 1.1em;
+    }
+
+    .mengeButton {
+        width: 30%;
+        gap: 0.9em;
+        justify-content: flex-start;
+    }
+
+    .checkoutButton {
+        margin: 0;
+        width: 55%;
+        align-items: center;
+        gap: 0.9em;
+    }
+
+    .likeButton {
+        justify-content: flex-start;
+    }
+
+    .minusBTN {
+        width: 1.7em;
+        height: 25%;
+    }
+
+    #minusBTN {
+        font-size: 1.3em;
+    }
+
+    #counter {
+        font-size: 1.1em;
+    }
+
+    .plusBTN {
+        width: 1.7em;
+        height: 25%;
+    }
+
+    #plusBTN {
+        font-size: 1.3em;
+    }
+
+    .warenkorbBTN {
+        height: 1.9em;
+        width: 90%;
+    }
+
+    #warenkorbBTN {
+        font-size: 0.7em;
+    }
+
+    .paypalBTN {
+        height: 1.9em;
+        width: 90%;
+    }
+
+    .paypalIMG {
+        width: auto;
+        height: 0.9em;
+    }
+
+    .likeBTN {
+        width: 3em;
+        height: 3em;
+    }
+
+    .heartIMG {
+        width: auto;
+        height: 1.8em;
+    }
+
+    .beschreibungP1 {
+        font-size: 0.9em;
+    }
+
+    .beschreibungP3 {
+        font-size: 0.9em;
+    }
+
+    .ulP2 {
+        font-size: 0.69em;
+    }
+
+    .ulP2p {
+        font-size: 1.3em;
+    }
+
+    .footer {
+        padding: 0;
+    }
+}
+
+/* Media Query für Bildschirme unter 870px */
+
+@media (max-width: 870px) {
+
+    .header-navContainer {
+        height: 5em;
+    }
+
+    .header-navButton a {
+        font-size: 0.7em;
+    }
+
+    .produktContainer {
+        height: 90em;
+    }
+
+    .kaufBox {
+        margin: 3em 3em 3em 40%;
+        height: 25em;
+    }
+
+    .produktBox {
+        width: 90%;
+        margin: 5%;
+    }
+
+    .mengeButton {
+        width: 30%;
+    }
+
+    .checkoutButton {
+        width: 50%;
+    }
+
+    .beschreibungsBox {
+        width: 90%;
+        margin: 5%;
+    }
+
+    .footerContainer {
+        height: 9em;
+    }
+
+    .footer {
+        height: 7em;
+    }
+}
+
+/* Media Query für Bildschirme unter 660px */
+
+@media (max-width: 660px) {
+
+
+    .produktContainer {
+        height: 120em;
+    }
+
+    .produkt-suchLeiste {
+        padding-top: 3%;
+    }
+
+    .produktBox {
+        width: 80%;
+        height: 45em;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+        display: flex;
+        margin: 7% 10% 3% 10%;
+    }
+
+    .imgBox {
+        height: 21em;
+        width: 72%;
+        margin: 3em 1em 0 1em;
+    }
+
+    .kaufBox {
+        margin: 26em 0 0 0;
+        width: 72%;
+        height: 18.5em;
+    }
+
+    .kaufboxH2 {
+        font-size: 1.8em;
+        margin-top: 0.5em;
+    }
+
+    .kaufboxP1 {
+        margin-top: 3em;
+    }
+
+    .kaufboxUnderline {
+        width: 100%;
+    }
+
+    .mengeButton {
+        width: 30%;
+    }
+
+    .checkoutButton {
+        align-items: center;
+        width: 55%;
+    }
+
+    .warenkorbBTN {
+        width: 95%;
+    }
+
+    #warenkorbBTN {
+        font-size: 0.7em;
+    }
+
+    .paypalBTN {
+        width: 95%;
+    }
+
+    .likeButton {
+        width: 15%;
+        justify-content: flex-end;
+    }
+
+    .beschreibungsBox {
+        height: 55em;
+        margin-top: 7%;
+    }
+
+    .boxP1 {
+        height: 20%;
+        font-size: 0.9em;
+    }
+
+    .boxP2 {
+        height: 60%;
+        align-items: flex-start;
+    }
+
+    .ulP2 {
+        font-size: 0.72em;
+        margin: 0 5em 0 0;
+    }
+
+    .boxP3 {
+        height: 20%;
+        font-size: 0.9em;
+    }
+
+    .footerContainer {
+        height: 15vh;
+    }
+
+    .footer {
+        font-size: 1.2em;
+    }
+
+    .header-navButton {
+        display: none;
+        flex-direction: column;
+        width: 6em;
+        top: 4.5em;
+        right: 2em;
+        gap: 0.5em;
+        z-index: 100;
+    }
+
+    .header-navButton a {
+        font-size: 0.7em;
+        width: 100%;
+        text-align: center;
+    }
+
+    .header-navButton.show {
+        display: flex;
+    }
+
+    .dropdown-btn {
+        display: block;
+        position: absolute;
+        top: 1.6em;
+        right: 2.5em;
+        width: auto;
+        background-color: #FFF7AF;
+        border: none;
+        cursor: pointer;
+        z-index: 1000;
+        fill: #234412;
+        border-radius: 1.5em;
+        padding: 0.4em 0.8em 0.1em;
+        box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.7);
+        transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s;
+    }
+}
+
+/* Media Query für Bildschirme unter 480px */
+
+@media (max-width: 480px) {
+    .produktContainer {
+        height: 141em;
+    }
+
+    .produktBox {
+        height: 41em;
+    }
+
+    .beschreibungsBox {
+        height: 89em;
+    }
+
+    .boxP1 {
+        height: 15em;
+    }
+
+    .boxP2 {
+        height: 59em;
+    }
+
+    .boxP3 {
+        height: 15em;
+    }
+
+    .imgBox {
+        height: 17em;
+        width: 95%;
+        margin: 0.3em;
+    }
+
+    .kaufBox {
+        margin-top: 19em;
+        width: 95%;
+    }
+
+    .mengeButton {
+        display: none;
+    }
+
+    .likeButton {
+        display: none;
+    }
+
+    .checkoutButton {
+        width: 100%;
+    }
+
+    #warenkorbBTN {
+        font-size: 0.8em;
+    }
+
+    .paypalIMG {
+        width: auto;
+        height: 1.3em;
+    }
+}
 

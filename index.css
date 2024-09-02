@@ -768,9 +768,10 @@ body {
     .nav-container {
         display: none;
         flex-direction: column;
-        width: 5em;
+        width: 6em;
         top: 4.5em;
-        right: 2em;
+        right: 2.5em;
+        z-index: 100;
     }
 
     .nav-container.show {
@@ -781,8 +782,9 @@ body {
         padding: 0.3em 0.12em;
         text-align: center;
         width: 100%;
-        font-size: 0.5em;
+        font-size: 0.7em;
         gap: 0.5em;
+        padding: 0.5625em 0.9375em 0.625em;
     }
 
     .dropdown-btn {
