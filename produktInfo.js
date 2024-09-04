@@ -82,10 +82,6 @@ document.addEventListener('DOMContentLoaded', function() {
         infoElement.textContent = productInfo;
     }
 
-    if (productId) {
-        infoElement.textContent = productId;
-    }
-
     // Dynamisches Einfügen der Produktbeschreibungen und Merkmale
     if (productId && productDescriptions[productId]) {
         const product = productDescriptions[productId];

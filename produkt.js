@@ -1,97 +1,3 @@
-// ------- Funktion für den Dropdown Button
-
-document.addEventListener('DOMContentLoaded', function() {
-    const dropdownBtn = document.querySelector('.dropdown-btn');
-    const headerNavButton = document.querySelector('.headerNav-button');
-
-    function checkScreenSize() {
-        if (window.innerWidth > 580) {
-            headerNavButton.style.display = 'flex';
-            dropdownBtn.style.display = 'none';
-            headerNavButton.classList.remove('show');
-        } else {
-            headerNavButton.style.display = 'none';
-            dropdownBtn.style.display = 'block';
-        }
-    }
-
-    dropdownBtn.addEventListener('click', function() {
-        if (headerNavButton.style.display === 'none' || headerNavButton.style.display === '') {
-            headerNavButton.style.display = 'flex';
-        } else {
-            headerNavButton.style.display = 'none';
-        }
-    });
-
-    window.addEventListener('resize', checkScreenSize);
-    checkScreenSize();
-});
-
-// ------- Funktion für den Select ------
-
-document.addEventListener("DOMContentLoaded", function() {
-    const sortSelect = document.getElementById('sortieren');
-    const produktContainer = document.querySelector('.produkt-container');
-    const produktBoxen = Array.from(produktContainer.getElementsByClassName('produkt-boxen'));
-
-    sortSelect.addEventListener('change', function() {
-        const sortierenNach = this.value;
-
-        if (sortierenNach === 'standart') {
-            // Sammle alle Produkt-Items in einem Array
-            let allItems = [];
-            produktBoxen.forEach(box => {
-                allItems = allItems.concat(Array.from(box.getElementsByClassName('produkt-item')));
-            });
-
-            // Sortiere die Items basierend auf dem ursprünglichen data-index
-            allItems.sort((a, b) => {
-                const indexA = parseInt(a.getAttribute('data-index'));
-                const indexB = parseInt(b.getAttribute('data-index'));
-                return indexA - indexB;
-            });
-
-            // Entferne die Items aus ihren Boxen, ohne die Boxen selbst zu entfernen
-            allItems.forEach(item => item.parentNode.removeChild(item));
-
-            // Füge die sortierten Items wieder in ihre ursprünglichen Boxen ein
-            allItems.forEach((item, index) => {
-                const boxIndex = Math.floor(index / Math.ceil(allItems.length / produktBoxen.length));
-                produktBoxen[boxIndex].appendChild(item);
-            });
-
-            return;
-        }
-
-        // Sammle alle Produkt-Items in einem Array für die Preis-Sortierung
-        let allItems = [];
-        produktBoxen.forEach(box => {
-            allItems = allItems.concat(Array.from(box.getElementsByClassName('produkt-item')));
-        });
-
-        // Sortiere die Items basierend auf dem Preis
-        allItems.sort((a, b) => {
-            const preisA = parseFloat(a.getAttribute('data-preis'));
-            const preisB = parseFloat(b.getAttribute('data-preis'));
-
-            if (sortierenNach === 'preis-hoch-niedrig') {
-                return preisB - preisA; // Absteigend
-            } else {
-                return preisA - preisB; // Aufsteigend
-            }
-        });
-
-        // Entferne die Items aus ihren Boxen, ohne die Boxen selbst zu entfernen
-        allItems.forEach(item => item.parentNode.removeChild(item));
-
-        // Füge die sortierten Items wieder in ihre ursprünglichen Boxen ein
-        allItems.forEach((item, index) => {
-            const boxIndex = Math.floor(index / Math.ceil(allItems.length / produktBoxen.length));
-            produktBoxen[boxIndex].appendChild(item);
-        });
-    });
-});
-
 // ------ Definition des JSON-Objekts für die Produktbeschreibung
 
 const productDescriptions = {
@@ -196,8 +102,211 @@ const productDescriptions = {
     }
 };
 
+// ----- 1. Produktdaten-Array definieren -----
 
-// ------- Funktion zur handhabung der Produktdetails
+const products = [
+    {
+        id: "dragoran-figur",
+        name: "Dragoran Actionfigur",
+        preis: "39.98",
+        info: "39,98€ (inkl.MwSt.)",
+        imgSrc: "img/Dragoran Actionfigur.png"
+    },
+    {
+        id: "dragonir-kuscheltier",
+        name: "Dragonir Kuscheltier",
+        preis: "17.99",
+        info: "17,99€ (inkl.MwSt.)",
+        imgSrc: "img/Dragonir Kuscheltier.png"
+    },
+    {
+        id: "dratini-kuscheltier",
+        name: "Dratini Kuscheltier",
+        preis: "16.99",
+        info: "16,99€ (inkl.MwSt.)",
+        imgSrc: "img/Dratini Kuscheltier.png"
+    },
+    {
+        id: "superball",
+        name: "Superball",
+        preis: "9.99",
+        info: "9,99€ (inkl.MwSt.)",
+        imgSrc: "img/Superball.png"
+    },
+    {
+        id: "mewtwo-amiibo",
+        name: "Mewtwo Actionfigur",
+        preis: "39.99",
+        info: "39,99€ (inkl.MwSt.)",
+        imgSrc: "img/Mewtwo Actionfigur.png"
+    },
+    {
+        id: "mew-kuscheltier",
+        name: "Mew Kuscheltier",
+        preis: "16.98",
+        info: "16,98€ (inkl.MwSt.)",
+        imgSrc: "img/Mew Kuscheltier.png"
+    },
+    {
+        id: "lucario-actionfigur",
+        name: "Lucario Actionfigur",
+        preis: "37.99",
+        info: "37,99€ (inkl.MwSt.)",
+        imgSrc: "img/Lucario Actionfigur.png"
+    },
+    {
+        id: "shiny-glurak-kuscheltier",
+        name: "Shiny Glurak Kuscheltier",
+        preis: "19.99",
+        info: "19,99€ (inkl.MwSt.)",
+        imgSrc: "img/ShinyGlurak.png"
+    },
+    {
+        id: "rayquaza-actionfigur",
+        name: "Rayquaza Actionfigur",
+        preis: "49.99",
+        info: "49,99€ (inkl.MwSt.)",
+        imgSrc: "img/Rayquaza Actionfigur.png"
+    }
+];
+
+// 2. Funktion zum Erstellen eines Produkt-Items
+
+function createProductItem(product) {
+    const productDiv = document.createElement('div');
+    productDiv.classList.add('produkt-item');
+    productDiv.setAttribute('data-id', product.id);
+    productDiv.setAttribute('data-preis', product.preis);
+    productDiv.setAttribute('data-name', product.name);
+    productDiv.setAttribute('data-info', product.info);
+
+    productDiv.innerHTML = `
+        <img class="produkt-img" src="${product.imgSrc}" alt="${product.name} Produkt IMG">
+        <div class="imgBox-underline"></div>
+        <h2 class="produkt-name">${product.name}</h2>
+        <span class="produkt-info-box">
+            <p class="produkt-info">${product.info}</p>
+            <a href="#" class="ansehen-button" onclick="saveProductDetails(event)">Produkt&nbsp;&nbsp;&nbsp;Ansehen</a>
+        </span>
+    `;
+    return productDiv;
+}
+
+// 3. Funktion zum Hinzufügen der Produkte zum DOM
+
+function displayProducts() {
+    const productContainer = document.getElementById('produkt-boxen');
+    products.forEach(product => {
+        const productItem = createProductItem(product);
+        productContainer.appendChild(productItem);
+    });
+}
+
+// 4. Initialisierung der Anzeige
+
+document.addEventListener('DOMContentLoaded', function() {
+    displayProducts();
+    checkScreenSize(); // Für den Dropdown Button
+
+    // ----- Suchfunktion ------
+    function searchProducts() {
+        const searchInput = document.getElementById('searchInput').value.toLowerCase().trim();
+        console.log('Search Input:', searchInput); // Debugging: Überprüfe die Suchanfrage
+
+        if (searchInput === '') {
+            console.log('Suchfeld ist leer. Zeige alle Produkte an.');
+            displayProducts(); // Zeigt alle Produkte an, wenn das Suchfeld leer ist
+            return;
+        }
+
+        const filteredProducts = products.filter(product =>
+            product.name.toLowerCase().includes(searchInput)
+        );
+
+        console.log('Filtered Products:', filteredProducts); // Debugging: Überprüfe gefilterte Produkte
+
+        // Zeige nur gefilterte Produkte an
+        const productContainer = document.getElementById('produkt-boxen');
+        productContainer.innerHTML = ''; // Leert die Liste, um alle alten Produkte zu entfernen
+
+        if (filteredProducts.length > 0) {
+            filteredProducts.forEach(product => {
+                const productItem = createProductItem(product);
+                productContainer.appendChild(productItem);
+            });
+        } else {
+            console.log('Keine Produkte gefunden.'); // Debugging: Ausgabe, wenn keine Produkte gefunden wurden
+            productContainer.innerHTML = '<p>Keine Produkte gefunden.</p>'; // Anzeige, wenn keine Produkte gefunden wurden
+        }
+    }
+
+// Event Listener für die Suche
+    document.getElementById('searchButton').addEventListener('click', searchProducts);
+    document.getElementById('searchInput').addEventListener('keyup', function(event) {
+        if (event.key === 'Enter') { // Suche auch bei Enter-Taste
+            searchProducts();
+        }
+    });
+
+});
+
+
+
+// ------- Funktion für den Dropdown Button ------
+
+function checkScreenSize() {
+    const dropdownBtn = document.querySelector('.dropdown-btn');
+    const headerNavButton = document.querySelector('.headerNav-button');
+
+    if (window.innerWidth > 580) {
+        headerNavButton.style.display = 'flex';
+        dropdownBtn.style.display = 'none';
+        headerNavButton.classList.remove('show');
+    } else {
+        headerNavButton.style.display = 'none';
+        dropdownBtn.style.display = 'block';
+    }
+
+    dropdownBtn.addEventListener('click', function() {
+        if (headerNavButton.style.display === 'none' || headerNavButton.style.display === '') {
+            headerNavButton.style.display = 'flex';
+        } else {
+            headerNavButton.style.display = 'none';
+        }
+    });
+
+    window.addEventListener('resize', checkScreenSize);
+}
+
+// ------- Funktion für den Select (Sortierung) ------
+
+document.addEventListener("DOMContentLoaded", function() {
+    const sortSelect = document.getElementById('sortieren');
+    const produktBoxen = document.querySelector('.produkt-boxen');
+
+    sortSelect.addEventListener('change', function() {
+        const sortierenNach = this.value;
+        const allItems = Array.from(produktBoxen.getElementsByClassName('produkt-item'));
+
+        // Sortiere die Items basierend auf dem Preis oder ursprünglichen Index
+
+        allItems.sort((a, b) => {
+            if (sortierenNach === 'standart') {
+                return products.findIndex(p => p.id === a.getAttribute('data-id')) - products.findIndex(p => p.id === b.getAttribute('data-id'));
+            }
+            const preisA = parseFloat(a.getAttribute('data-preis'));
+            const preisB = parseFloat(b.getAttribute('data-preis'));
+            return sortierenNach === 'preis-hoch-niedrig' ? preisB - preisA : preisA - preisB;
+        });
+
+        // Entferne die Items aus ihrem Container und füge sie sortiert wieder hinzu
+
+        allItems.forEach(item => produktBoxen.removeChild(item));
+        allItems.forEach(item => produktBoxen.appendChild(item));
+    });
+});
+
+// ------- Funktion zur Handhabung der Produktdetails -------------
 
 function saveProductDetails(event) {
     event.preventDefault();  // Verhindert das Standardverhalten des Links
@@ -218,7 +327,7 @@ function saveProductDetails(event) {
     const imgSrc = imgElement.src;
     const productName = productItem.getAttribute('data-name');
     const productInfo = productItem.getAttribute('data-info');
-    const productId = productItem.getAttribute('data-id'); // ID hinzufügen
+    const productId = productItem.getAttribute('data-id');
 
     if (!imgSrc || !productName || !productInfo || !productId) {
         console.error('Produktdetails fehlen.');
@@ -228,9 +337,10 @@ function saveProductDetails(event) {
     localStorage.setItem('selectedProductImg', imgSrc);
     localStorage.setItem('selectedProductName', productName);
     localStorage.setItem('selectedProductInfo', productInfo);
-    localStorage.setItem('selectedProductId', productId); // Speichern der ID
+    localStorage.setItem('selectedProductId', productId);
 
     window.location.href = 'produktInfo2.html';  // Weiterleitung zur produktInfo2.html
 }
+
 
 
