@@ -470,7 +470,9 @@ textarea:focus {
     .kontakt-page {
         height: 100em;
     }
-/*- Header -*/
+
+/*--- Header ---*/
+
     .header-img {
         height: 15em;
     }
@@ -488,7 +490,9 @@ textarea:focus {
     .button-box {
         font-size: 0.9em;
     }
-/*- Body -*/
+
+/*--- Body ---*/
+
     .info-bereich {
         font-size: 1.1em;
     }
@@ -506,6 +510,8 @@ textarea:focus {
         height: 90em;
     }
 
+/*--- Header ---*/
+
     .buttonbox {
         width: 63.5vw;
         height: 2.4em;
@@ -519,6 +525,8 @@ textarea:focus {
     .button-box {
         font-size: 0.74em;
     }
+
+/*--- Body ---*/
 
     .body {
         height: 69em;
@@ -535,7 +543,7 @@ textarea:focus {
     .einreichenButton {
         font-size: 0.7em;
     }
-
+/*--- Footer ---*/
     .footer {
         font-size: 1.3em;
     }
@@ -548,6 +556,8 @@ textarea:focus {
     .kontakt-page {
         height: 80em;
     }
+
+/*--- Header ---*/
 
     .header-img {
         height: 13em;
@@ -567,6 +577,8 @@ textarea:focus {
     .button-box {
         font-size: 0.67em;
     }
+
+/*--- Body ---*/
 
     .body {
         height: 62em;
@@ -588,6 +600,8 @@ textarea:focus {
         font-size: 0.75em;
     }
 
+/*--- Footer ---*/
+
     .footer {
         font-size: 1.2em;
     }
@@ -597,6 +611,8 @@ textarea:focus {
 
 @media (max-width: 751px) {
 
+/*--- Header ---*/
+
     .iconbox {
         margin: 0px 0px 0px 5.3%;
     }
@@ -604,6 +620,8 @@ textarea:focus {
     .button-box {
         gap: 2em;
     }
+
+/*--- Body ---*/
 
     .info-bereich {
         flex-direction: column;
@@ -637,6 +655,8 @@ textarea:focus {
         margin: 0.5em 0 0 0;
     }
 
+/*--- Footer ---*/
+
     .footer {
         font-size: 1.1em;
     }
@@ -645,6 +665,8 @@ textarea:focus {
 /*- Media Querie für Bildschrime unter 580px -*/
 
 @media (max-width: 580px) {
+
+/*--- Header ---*/
 
     .header-img {
         height: 11em;
@@ -663,6 +685,8 @@ textarea:focus {
     .button-box {
         font-size: 0.58em;
     }
+
+/*--- Body ---*/
 
     .überschrift {
         font-size: 2em;
@@ -691,6 +715,8 @@ textarea:focus {
 
 @media (max-width: 480px) {
 
+/*--- Header ---*/
+
     .buttonbox {
         background-color: rgba(252, 200, 114, 0);
         margin: 3em 0 0 0;
@@ -703,7 +729,6 @@ textarea:focus {
         border: none;
         box-shadow: none;
         }
-
 
     .button-box {
         background-color: rgba(252, 200, 114, 0);
@@ -769,6 +794,8 @@ textarea:focus {
         width: 100%;
     }
 
+/*--- Body ---*/
+
     form p {
         font-size: 0.7em;
     }
@@ -781,10 +808,11 @@ textarea:focus {
         font-size: 0.6em;
     }
 
+/*--- Footer ---*/
+
     .footer {
         font-size: 0.8em;
     }
-
 }
 
 
