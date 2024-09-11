@@ -1,0 +1,796 @@
+/*---- GLOBAL ----*/
+
+@font-face {
+    font-family: "Nico Moji";
+    src: url('fonts/NicoMoji-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Acme";
+    src: url('fonts/Acme-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.kontakt-page {
+    width: 100%;
+    background-color: #FCC872;
+    height: 112em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#br1 {
+    display: none;
+}
+
+input::placeholder {
+    color: rgba(117, 117, 117, 0.3);
+}
+
+textarea::placeholder {
+    color: rgba(117, 117, 117, 0.3);
+}
+
+/*---- HEADER ----*/
+
+.header-img {
+    width: 90%;
+    height: 24em;
+    background-image: url("./img/Hintergrund Landschaft.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 55%;
+    border: 1px solid #234412;
+    border-top: 0px;
+    display: flex;
+    align-items: center;
+}
+
+.iconbox {
+    width: 13em;
+    height: auto;
+    background-color: #FCC872;
+    margin: 0px 0px 0px 8em;
+    border-radius: 60px;
+    border: 1px solid #234412;
+    box-shadow: 1px 3px 3px 1px rgba(0, 0, 0, 0.4);
+}
+
+.iconIMG {
+    width: 100%;
+}
+
+.buttonbox {
+    width: 72vw;
+    height: 3.5em;
+    background-color: #FCC872;
+    margin: 0px -1.5px 0px -1.5px;
+    border: 1px solid #234412;
+    border-right: none;
+    border-left: none;
+    box-shadow: 0px 7px 3px -3px rgba(0, 0, 0, 0.4);
+}
+
+.button-box {
+    width: 100%;
+    height: 100%;
+    background-color: #FCC872;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8em;
+    font-family: "Nico Moji";
+    font-size: 1.2em;
+    text-decoration: none;
+}
+
+.button-box a:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.3);
+}
+
+.startseite-btn {
+    background-color: #FFF7AF;
+    padding: 0.5625em 0.9375em 0.625em;
+    border-radius: 1.5625em;
+    border: 1px solid #234412;
+    text-decoration: none;
+    color: #234412;
+}
+
+.produkte-btn {
+    background-color: #FFF7AF;
+    padding: 0.5625em 0.9375em 0.625em;
+    border-radius: 1.5625em;
+    border: 1px solid #234412;
+    text-decoration: none;
+    color: #234412;
+}
+
+.uberuns-btn {
+    background-color: #FFF7AF;
+    padding: 0.5625em 0.9375em 0.625em;
+    border-radius: 1.5625em;
+    border: 1px solid #234412;
+    text-decoration: none;
+    color: #234412;
+}
+
+.dropdown-btn {
+    display: none;
+}
+
+
+/*---- BODY ----*/
+
+.body {
+    width: 90%;
+    height: 80em;
+    background-color: #FFF7AF;
+    display: flex;
+    border: 1px solid #234412;
+    border-top: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.überschrift {
+    color: #234412;
+    font-family: Acme;
+    font-size: 4em;
+    letter-spacing: 0.15em;
+    display: flex;
+    margin: 0.4em 0 0 0;
+    justify-content: center;
+}
+
+.info-bereich {
+    display: flex;
+    width: 85%;
+    height: 13em;
+    margin: 2em 0 0 0;
+}
+
+.textbox01 {
+    top: -2%;
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    line-height: 1.8em;
+    letter-spacing: 0.05em;
+}
+
+.text01 {
+    padding-top: 0.8em;
+    color: #234412;
+}
+
+.textbox02 {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    line-height: 3em;
+    letter-spacing: 0.2em;
+}
+.text02 {
+    color: #234412;
+}
+
+.underline01 {
+    width: 85%;
+    height: 0.1em;
+    background-color: rgba(35, 68, 18, 0.5);
+    margin: 5em 0 0 0;
+}
+
+.eingabebereich {
+    width: 55%;
+    height: 100%;
+    background-color: #FFF7AF;
+    margin: 8em 0 0 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.eingabebereich input:focus {
+    outline: none;
+}
+
+.headline01 {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    font-family: Acme;
+    color: #234412;
+    margin-top: 1em;
+}
+
+.p-vorname {
+    left: 4%;
+    position: relative;
+    width: 50%;
+    font-weight: bold;
+    margin: 0;
+}
+
+.p-nachname {
+    left: 1%;
+    position: relative;
+    width: 50%;
+    font-weight: bold;
+    margin: 0;
+}
+
+.textfeld01 {
+    display: flex;
+    justify-content: center;
+    padding-top: 3em;
+    gap: 2%;
+    padding: 0;
+}
+
+#vornamenEingabe {
+    background-color: #FFF7AF;
+    border-top: none;
+    border-bottom: 2px solid #234412;
+    border-left:  none;
+    border-right:  none;
+    width: 45%;
+    height: 3em;
+}
+
+#nachnamenEingabe {
+    background-color: #FFF7AF;
+    border-top: none;
+    border-bottom: 2px solid #234412;
+    border-left:  none;
+    border-right:  none;
+    width: 45%;
+    height: 3em;
+}
+
+.headline02 {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    font-family: Acme;
+    color: #234412;
+    margin-top: 2em;
+}
+
+.tel-nummer {
+    left: 4%;
+    position: relative;
+    width: 50%;
+    font-weight: bold;
+    margin: 0;
+}
+
+.e-mail {
+    left: 1%;
+    position: relative;
+    width: 50%;
+    font-weight: bold;
+    margin: 0;
+}
+
+.textfeld02 {
+    display: flex;
+    justify-content: center;
+    padding-top: 3em;
+    gap: 2%;
+    padding: 0;
+}
+
+#telefonEingabe {
+    background-color: #FFF7AF;
+    border-top: none;
+    border-bottom: 2px solid #234412;
+    border-left:  none;
+    border-right:  none;
+    width: 45%;
+    height: 3em;
+}
+
+#emailEingabe {
+    background-color: #FFF7AF;
+    border-top: none;
+    border-bottom: 2px solid #234412;
+    border-left:  none;
+    border-right:  none;
+    width: 45%;
+    height: 3em;
+}
+
+
+.headline03 {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    font-family: Acme;
+    color: #234412;
+    margin-top: 2em;
+}
+
+.anfragen-eingabe {
+    left: 4%;
+    position: relative;
+    width: 50%;
+    font-weight: bold;
+    margin: 0;
+}
+
+.textfeld03 {
+    display: flex;
+    justify-content: center;
+    padding-top: 3em;
+    gap: 2%;
+    padding: 0;
+}
+
+#anfragenEingabe {
+    background-color: #FFF7AF;
+    border-top: none;
+    border-bottom: none;
+    border-left:  none;
+    border-right:  none;
+    width: 92%;
+    height: 15em;
+}
+
+textarea:focus {
+    outline: none;
+}
+
+.button-box2 {
+    width: 100%;
+    height: 4em;
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.einreichenButton {
+    margin: 1em 4% 0 4%;
+    width: auto;
+    height: 2.2em;
+    position: relative;
+    display: flex;
+    background-color: #FFF7AF;
+    padding: 0.5625em 0.9375em 0.625em;
+    border-radius: 1.5625em;
+    border: 1px solid #234412;
+    color: #234412;
+    font-size: 1.1em;
+    font-family: "Nico Moji";
+}
+
+.button-box2 button:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.3);
+}
+
+.underline02 {
+    width: 92%;
+    height: 2px;
+    background-color: rgba(35, 68, 18, 1);
+    margin: 0.2em 0 0 0;
+    left: 4%;
+    position: relative;
+}
+
+/*---- FOOTER ----*/
+
+.footerContainer {
+    width: 100%;
+    height: 25vh;
+    background-color: #FCC872;
+}
+
+.footer {
+    background-color: #FCC872;
+    justify-content: center;
+    text-align: center;
+    font-size: 2em;
+    color: #234412;
+    font-family: Acme;
+}
+
+.text2 {
+    font-size: 1.3em;
+    color: rgb(35, 68, 18, 0.5);
+}
+
+/*---- MEDIA QUERIES ----*/
+
+/*- Media Querie für Bildschrime unter 1450px -*/
+
+@media (max-width: 1450px) {
+
+/*--- Header ---*/
+
+    .kontakt-page {
+        height: 105em;
+    }
+
+    .header-img {
+        height: 18em;
+    }
+
+    .iconbox {
+        width: 11em;
+    }
+
+    .button-box {
+        font-size: 1em;
+    }
+
+/*--- Body ---*/
+
+    .überschrift {
+        font-size: 3em;
+    }
+
+    .info-bereich {
+        font-size: 1.2em;
+    }
+
+    .einreichenButton {
+        font-size: 0.9em;
+    }
+
+/*--- Footer ---*/
+
+    .footerContainer {
+        height: 12em;
+    }
+
+    .footer {
+        font-size: 1.5em;
+    }
+}
+
+/*- Media Querie für Bildschrime unter 1200px -*/
+
+@media (max-width: 1200px) {
+
+    .kontakt-page {
+        height: 100em;
+    }
+/*- Header -*/
+    .header-img {
+        height: 15em;
+    }
+
+    .iconbox {
+        width: 10em;
+        border-radius: 55px;
+    }
+
+    .buttonbox {
+        width: 64.9vw;
+        height: 3.2em;
+    }
+
+    .button-box {
+        font-size: 0.9em;
+    }
+/*- Body -*/
+    .info-bereich {
+        font-size: 1.1em;
+    }
+
+    .einreichenButton {
+        font-size: 0.8em;
+    }
+}
+
+/*- Media Querie für Bildschrime unter 1024px -*/
+
+@media (max-width: 1024px) {
+
+    .kontakt-page {
+        height: 90em;
+    }
+
+    .buttonbox {
+        width: 63.5vw;
+        height: 2.4em;
+    }
+
+    .iconbox {
+        width: 9em;
+        border-radius: 50px;
+    }
+
+    .button-box {
+        font-size: 0.74em;
+    }
+
+    .body {
+        height: 69em;
+    }
+
+    .überschrift {
+        font-size: 2.5em;
+    }
+
+    .info-bereich {
+        font-size: 0.93em;
+    }
+
+    .einreichenButton {
+        font-size: 0.7em;
+    }
+
+    .footer {
+        font-size: 1.3em;
+    }
+}
+
+/*- Media Querie für Bildschrime unter 868px -*/
+
+@media (max-width: 868px) {
+
+    .kontakt-page {
+        height: 80em;
+    }
+
+    .header-img {
+        height: 13em;
+    }
+
+    .iconbox {
+        width: 8em;
+        margin: 0px 0px 0px 4em;
+        border-radius: 45px;
+    }
+
+    .buttonbox {
+        width: 67.7vw;
+        height: 2.4em;
+    }
+
+    .button-box {
+        font-size: 0.67em;
+    }
+
+    .body {
+        height: 62em;
+    }
+
+    .überschrift {
+        font-size: 2.1em;
+    }
+
+    .info-bereich {
+        font-size: 0.78em;
+    }
+
+    form p {
+        font-size: 0.9em;
+    }
+
+    form input, form textarea {
+        font-size: 0.75em;
+    }
+
+    .footer {
+        font-size: 1.2em;
+    }
+}
+
+/*- Media Querie für Bildschrime unter 751px -*/
+
+@media (max-width: 751px) {
+
+    .iconbox {
+        margin: 0px 0px 0px 5.3%;
+    }
+
+    .button-box {
+        gap: 2em;
+    }
+
+    .info-bereich {
+        flex-direction: column;
+        width: 55%;
+        height: 21em;
+    }
+
+    .textbox01 {
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .textbox02 {
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .eingabebereich {
+        margin: 3em 0 0 0;
+    }
+
+    #br {
+        display: none;
+    }
+
+    form input, form textarea {
+        font-size: 0.7em;
+    }
+
+    .textfeld03 {
+        margin: 0.5em 0 0 0;
+    }
+
+    .footer {
+        font-size: 1.1em;
+    }
+}
+
+/*- Media Querie für Bildschrime unter 580px -*/
+
+@media (max-width: 580px) {
+
+    .header-img {
+        height: 11em;
+    }
+
+    .iconbox {
+        width: 7em;
+        border-radius: 37px;
+    }
+
+    .buttonbox {
+        width: 66.5vw;
+        height: 2em;
+    }
+
+    .button-box {
+        font-size: 0.58em;
+    }
+
+    .überschrift {
+        font-size: 2em;
+    }
+
+    .underline01 {
+        margin: 3em 0 0 0;
+    }
+
+    form p {
+        font-size: 0.8em;
+    }
+
+    form input, form textarea {
+        font-size: 0.68em;
+    }
+
+    #br1 {
+        display: flex;
+    }
+
+}
+
+/*- Media Querie für Bildschrime unter 480px -*/
+
+
+@media (max-width: 480px) {
+
+    .buttonbox {
+        background-color: rgba(252, 200, 114, 0);
+        margin: 3em 0 0 0;
+        display: flex;
+        width: 6em;
+        height: 7em;
+        justify-content: center;
+        position: relative;
+        left: 55%;
+        border: none;
+        box-shadow: none;
+        }
+
+
+    .button-box {
+        background-color: rgba(252, 200, 114, 0);
+        display: none;
+        flex-direction: column;
+        width: 6em;
+        top: 4.5em;
+        right: 2em;
+        gap: 0.5em;
+        font-size: 0.6em;
+    }
+
+    .button-box.show {
+        display: flex;
+    }
+
+    .dropdown-btn {
+        display: block;
+        position: absolute;
+        top: 1.6em;
+        right: 2.5em;
+        width: auto;
+        background-color: #FCC872;
+        border: 1px solid #234412;
+        cursor: pointer;
+        z-index: 1000;
+        fill: #234412;
+        border-radius: 1.5em;
+        padding: 0.4em 0.8em 0.1em;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7);
+        transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s;
+    }
+
+    .header-img {
+        align-items: flex-start;
+    }
+
+    .iconbox {
+        display: flex;
+        height: 2.3em;
+        width: 3.1em;
+        border-radius: 30px;
+        justify-content: center;
+        position: relative;
+        top: 1.1em;
+        left: 1em;
+        margin: 0;
+        }
+
+
+    .iconIMG {
+        width: 80%;
+        height: 110%;
+    }
+
+    .uberuns-btn {
+        background-color: #FFF7AF;
+        padding: 0.5625em 0.9375em 0.625em;
+        border-radius: 1.5625em;
+        border: 1px solid #234412;
+        text-decoration: none;
+        color: #234412;
+        width: 100%;
+    }
+
+    form p {
+        font-size: 0.7em;
+    }
+
+    form input, form textarea {
+        font-size: 0.4em;
+    }
+
+    .einreichenButton {
+        font-size: 0.6em;
+    }
+
+    .footer {
+        font-size: 0.8em;
+    }
+
+}
+
+
+
+
+
+
+
+

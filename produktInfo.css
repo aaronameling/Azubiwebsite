@@ -407,6 +407,9 @@ body {
     color: #234412;
     font-size: 0.95em;
     letter-spacing: 0.02em;
+    font-size: 1.3em;
+    line-height: 1.9em;
+    letter-spacing: 0.15em;
 }
 
 .ulP2p {
@@ -548,12 +551,8 @@ body {
         font-family: "Nico Moji";
         margin: 0em 3em 1.5em 0;
         color: #234412;
-        font-size: 0.8em;
+        font-size: 1.2em;
         letter-spacing: 0.02em;
-    }
-
-    .ulP2p {
-        font-size: 1.3em;
     }
 
 }
@@ -654,6 +653,11 @@ body {
         height: 1.8em;
     }
 
+    .ulP2 {
+        font-family: "Nico Moji";
+        font-size: 1em;
+    }
+
     .footer {
         font-size: 1.5em;
         padding-top: 5%;
@@ -677,7 +681,7 @@ body {
     }
 
     .kaufBox {
-        margin: 3em 3em 3em 17em;
+        margin: 3em 3em 3em 19em;
         height: 25em;
     }
 
@@ -775,12 +779,8 @@ body {
         font-size: 0.9em;
     }
 
-    .ulP2 {
-        font-size: 0.69em;
-    }
-
     .ulP2p {
-        font-size: 1.3em;
+        font-size: 1em;
     }
 
     .footer {
@@ -805,7 +805,7 @@ body {
     }
 
     .kaufBox {
-        margin: 3em 3em 3em 40%;
+        margin: 3em 3em 3em 43%;
         height: 25em;
     }
 
@@ -916,13 +916,15 @@ body {
     }
 
     .boxP1 {
-        height: 20%;
+        height: 10em;
         font-size: 0.9em;
     }
 
     .boxP2 {
-        height: 60%;
+        height: 20em;
         align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
     }
 
     .ulP2 {
@@ -931,7 +933,7 @@ body {
     }
 
     .boxP3 {
-        height: 20%;
+        height: 10em;
         font-size: 0.9em;
     }
 
@@ -985,7 +987,7 @@ body {
 
 @media (max-width: 480px) {
     .produktContainer {
-        height: 141em;
+        height: 97em;
     }
 
     .produktBox {
@@ -993,19 +995,21 @@ body {
     }
 
     .beschreibungsBox {
-        height: 89em;
+        height: 50em;
+        width: 80%;
+        margin: 10%;
     }
 
     .boxP1 {
-        height: 15em;
+        height: 11em;
     }
 
     .boxP2 {
-        height: 59em;
+        height: 15em;
     }
 
     .boxP3 {
-        height: 15em;
+        height: 9em;
     }
 
     .imgBox {

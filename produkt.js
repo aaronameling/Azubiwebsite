@@ -5,6 +5,7 @@ const productDescriptions = {
         "mainDescription": "Tauchen Sie ein in die Welt der Pokémon mit dieser beeindruckenden Mewtwo Amiibo-Figur. Diese exklusive Figur, die Mewtwo in seiner ikonischen Pose zeigt, ist ein absolutes Highlight für jeden Pokémon-Fan und Sammler. Mit einer Höhe von 20 cm hebt sich diese Figur durch ihre Detailtreue und Größe deutlich von herkömmlichen Amiibos ab.",
         "features": [
             "Figur: Mewtwo (Amiibo)",
+            "Typ: Psycho",
             "Material: Hochwertiger Kunststoff",
             "Größe: 20 cm hoch",
             "Funktionalität: Kompatibel mit einer Vielzahl von Nintendo-Spielen, einschließlich Super Smash Bros., wo Mewtwo als spielbarer Charakter verfügbar ist.",
@@ -16,6 +17,7 @@ const productDescriptions = {
         "mainDescription": "Erleben Sie die Kraft von Dragoran mit dieser hochwertigen Actionfigur. Die Figur zeigt Dragoran in einer beeindruckenden Kampfpause, ideal für Sammler und Pokémon-Enthusiasten.",
         "features": [
             "Figur: Dragoran",
+            "Typ: Drache Flug",
             "Material: Hochwertiger Kunststoff",
             "Größe: 25 cm hoch",
             "Bewegliche Gliedmaßen",
@@ -27,6 +29,7 @@ const productDescriptions = {
         "mainDescription": "Die Rayquaza Actionfigur stellt das legendäre Flug- und Drache-Pokémon in all seiner Pracht dar. Perfekt für Sammler, die nach einem außergewöhnlichen Stück suchen.",
         "features": [
             "Figur: Rayquaza",
+            "Typ: Drache Flug",
             "Material: Hochwertiger Kunststoff",
             "Größe: 30 cm hoch",
             "Bewegliche Gliedmaßen",
@@ -38,6 +41,7 @@ const productDescriptions = {
         "mainDescription": "Das Dragonir Kuscheltier ist der perfekte Begleiter für kleine und große Pokémon-Fans. Mit weichem Plüsch und liebevollen Details wird Dragonir schnell zum Lieblingsspielzeug.",
         "features": [
             "Figur: Dragonir",
+            "Typ: Drache",
             "Material: Weicher Plüsch",
             "Größe: 30 cm lang",
             "Besonders kuschelig",
@@ -49,6 +53,7 @@ const productDescriptions = {
         "mainDescription": "Das Dratini Kuscheltier ist klein, süß und unglaublich weich. Es lädt ein zum Kuscheln und Spielen und ist das perfekte Geschenk für jeden Pokémon-Fan.",
         "features": [
             "Figur: Dratini",
+            "Typ: Drache",
             "Material: Weicher Plüsch",
             "Größe: 20 cm lang",
             "Detailgetreu gestaltet",
@@ -60,6 +65,7 @@ const productDescriptions = {
         "mainDescription": "Der Superball ist ein unverzichtbares Zubehör für jeden Pokémon-Trainer. Mit seinem auffälligen Design und den verbesserten Fangmöglichkeiten ist er ideal für schwierige Pokémon.",
         "features": [
             "Modell: Superball",
+            "Typ: Pokébälle",
             "Material: Hochwertiger Kunststoff",
             "Größe: 10 cm Durchmesser",
             "Leuchtet im Dunkeln",
@@ -71,6 +77,7 @@ const productDescriptions = {
         "mainDescription": "Das Mew Kuscheltier ist klein, zart und von hoher Qualität. Mit seiner sanften Erscheinung und dem niedlichen Lächeln wird es schnell zum Favoriten in jeder Sammlung.",
         "features": [
             "Figur: Mew",
+            "Typ: Psycho",
             "Material: Weicher Plüsch",
             "Größe: 15 cm hoch",
             "Leicht und handlich",
@@ -82,6 +89,7 @@ const productDescriptions = {
         "mainDescription": "Die Lucario Actionfigur zeigt das ikonische Pokémon in seiner dynamischen Kampfpose. Ideal für Fans, die die Stärke und den Mut von Lucario schätzen.",
         "features": [
             "Figur: Lucario",
+            "Typ: Kampf Stahl",
             "Material: Hochwertiger Kunststoff",
             "Größe: 18 cm hoch",
             "Bewegliche Arme und Beine",
@@ -93,6 +101,7 @@ const productDescriptions = {
         "mainDescription": "Das Shiny Glurak Kuscheltier ist eine seltene und besondere Version des beliebten Pokémon. Mit seinem einzigartigen Farbschema und der weichen Oberfläche ist es ein Muss für Sammler.",
         "features": [
             "Figur: Shiny Glurak",
+            "Typ: Feuer Flug",
             "Material: Weicher Plüsch",
             "Größe: 35 cm hoch",
             "Einzigartige Shiny-Farbvariante",
@@ -102,11 +111,12 @@ const productDescriptions = {
     }
 };
 
-// ----- 1. Produktdaten-Array definieren -----
+// ----- 1. Produktdaten-Array definieren --------------------
 
 const products = [
     {
         id: "dragoran-figur",
+        typ: "Drache Flug",
         name: "Dragoran Actionfigur",
         preis: "39.98",
         info: "39,98€ (inkl.MwSt.)",
@@ -114,6 +124,7 @@ const products = [
     },
     {
         id: "dragonir-kuscheltier",
+        typ: "Drache",
         name: "Dragonir Kuscheltier",
         preis: "17.99",
         info: "17,99€ (inkl.MwSt.)",
@@ -121,6 +132,7 @@ const products = [
     },
     {
         id: "dratini-kuscheltier",
+        typ: "Drache",
         name: "Dratini Kuscheltier",
         preis: "16.99",
         info: "16,99€ (inkl.MwSt.)",
@@ -128,6 +140,7 @@ const products = [
     },
     {
         id: "superball",
+        typ: "Pokebälle",
         name: "Superball",
         preis: "9.99",
         info: "9,99€ (inkl.MwSt.)",
@@ -135,6 +148,7 @@ const products = [
     },
     {
         id: "mewtwo-amiibo",
+        typ: "Psycho",
         name: "Mewtwo Actionfigur",
         preis: "39.99",
         info: "39,99€ (inkl.MwSt.)",
@@ -142,6 +156,7 @@ const products = [
     },
     {
         id: "mew-kuscheltier",
+        typ: "Psycho",
         name: "Mew Kuscheltier",
         preis: "16.98",
         info: "16,98€ (inkl.MwSt.)",
@@ -149,6 +164,7 @@ const products = [
     },
     {
         id: "lucario-actionfigur",
+        typ: "Kampf Stahl",
         name: "Lucario Actionfigur",
         preis: "37.99",
         info: "37,99€ (inkl.MwSt.)",
@@ -156,6 +172,7 @@ const products = [
     },
     {
         id: "shiny-glurak-kuscheltier",
+        typ: "Feuer Flug",
         name: "Shiny Glurak Kuscheltier",
         preis: "19.99",
         info: "19,99€ (inkl.MwSt.)",
@@ -163,6 +180,7 @@ const products = [
     },
     {
         id: "rayquaza-actionfigur",
+        typ: "Drache Flug",
         name: "Rayquaza Actionfigur",
         preis: "49.99",
         info: "49,99€ (inkl.MwSt.)",
@@ -179,6 +197,7 @@ function createProductItem(product) {
     productDiv.setAttribute('data-preis', product.preis);
     productDiv.setAttribute('data-name', product.name);
     productDiv.setAttribute('data-info', product.info);
+    productDiv.setAttribute('data-typ', product.typ)
 
     productDiv.innerHTML = `
         <img class="produkt-img" src="${product.imgSrc}" alt="${product.name} Produkt IMG">
@@ -208,7 +227,9 @@ document.addEventListener('DOMContentLoaded', function() {
     displayProducts();
     checkScreenSize(); // Für den Dropdown Button
 
-    // ----- Suchfunktion ------
+
+// ----- Suchfunktion -------------------------
+
     function searchProducts() {
         const searchInput = document.getElementById('searchInput').value.toLowerCase().trim();
         console.log('Search Input:', searchInput); // Debugging: Überprüfe die Suchanfrage
@@ -247,12 +268,10 @@ document.addEventListener('DOMContentLoaded', function() {
             searchProducts();
         }
     });
-
 });
 
 
-
-// ------- Funktion für den Dropdown Button ------
+// ------- Funktion für den Dropdown Button ----------------
 
 function checkScreenSize() {
     const dropdownBtn = document.querySelector('.dropdown-btn');
@@ -278,7 +297,9 @@ function checkScreenSize() {
     window.addEventListener('resize', checkScreenSize);
 }
 
-// ------- Funktion für den Select (Sortierung) ------
+
+
+// ------- Funktion für den Select (Sortierung) ----------------------
 
 document.addEventListener("DOMContentLoaded", function() {
     const sortSelect = document.getElementById('sortieren');
@@ -286,25 +307,29 @@ document.addEventListener("DOMContentLoaded", function() {
 
     sortSelect.addEventListener('change', function() {
         const sortierenNach = this.value;
-        const allItems = Array.from(produktBoxen.getElementsByClassName('produkt-item'));
+        let filteredProducts = [...products]; // Kopie des Originalproduktarrays erstellen
 
-        // Sortiere die Items basierend auf dem Preis oder ursprünglichen Index
+        // Überprüfen, ob nach Typ sortiert werden soll
+        if (sortierenNach !== 'standart' && sortierenNach !== 'preis-hoch-niedrig' && sortierenNach !== 'preis-niedrig-hoch') {
+            filteredProducts = products.filter(product => product.typ.includes(sortierenNach));
+        }
 
-        allItems.sort((a, b) => {
-            if (sortierenNach === 'standart') {
-                return products.findIndex(p => p.id === a.getAttribute('data-id')) - products.findIndex(p => p.id === b.getAttribute('data-id'));
-            }
-            const preisA = parseFloat(a.getAttribute('data-preis'));
-            const preisB = parseFloat(b.getAttribute('data-preis'));
-            return sortierenNach === 'preis-hoch-niedrig' ? preisB - preisA : preisA - preisB;
+        // Sortiere die Produkte basierend auf dem Preis oder dem ursprünglichen Index
+        if (sortierenNach === 'preis-hoch-niedrig') {
+            filteredProducts.sort((a, b) => parseFloat(b.preis) - parseFloat(a.preis));
+        } else if (sortierenNach === 'preis-niedrig-hoch') {
+            filteredProducts.sort((a, b) => parseFloat(a.preis) - parseFloat(b.preis));
+        }
+
+        // Entferne alle aktuellen Produkt-Items und füge die gefilterten/sortierten Produkte wieder hinzu
+        produktBoxen.innerHTML = ''; // Entferne alle aktuellen Produkt-Items
+        filteredProducts.forEach(product => {
+            const productItem = createProductItem(product);
+            produktBoxen.appendChild(productItem);
         });
-
-        // Entferne die Items aus ihrem Container und füge sie sortiert wieder hinzu
-
-        allItems.forEach(item => produktBoxen.removeChild(item));
-        allItems.forEach(item => produktBoxen.appendChild(item));
     });
 });
+
 
 // ------- Funktion zur Handhabung der Produktdetails -------------
 
@@ -341,6 +366,5 @@ function saveProductDetails(event) {
 
     window.location.href = 'produktInfo2.html';  // Weiterleitung zur produktInfo2.html
 }
-
 
 
