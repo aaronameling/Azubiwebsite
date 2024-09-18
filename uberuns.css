@@ -1,0 +1,1633 @@
+/*---- GLOBAL ----*/
+
+@font-face {
+    font-family: "Nico Moji";
+    src: url('fonts/NicoMoji-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Acme";
+    src: url('fonts/Acme-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.uberuns-page {
+    width: 100%;
+    height: 185em;
+    display: flex;
+    flex-direction: column;
+    background-color: #FCC872;
+    align-items: center;
+}
+
+/*---- HEADER ----*/
+
+.header-img {
+    width: 90%;
+    height: 20em;
+    background-image: url("./img/Hintergrund Landschaft.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 55%;
+    border: 1px solid #234412;
+    border-top: 0px;
+    display: flex;
+    align-items: center;
+}
+
+.iconbox {
+    width: 13em;
+    height: auto;
+    background-color: #FCC872;
+    margin: 0px 0px 0px 2em;
+    border-radius: 60px;
+    border: 1px solid #234412;
+    box-shadow: 1px 3px 3px 1px rgba(0, 0, 0, 0.4);
+}
+
+.iconIMG {
+    width: 100%;
+}
+
+.buttonbox {
+    width: 78vw;
+    height: 3.5em;
+    background-color: #FCC872;
+    margin: 0px -1.5px 0px -1.5px;
+    border: 1px solid #234412;
+    border-right: none;
+    border-left: none;
+    box-shadow: 0px 7px 3px -3px rgba(0, 0, 0, 0.4);
+}
+
+.button-box {
+    width: 100%;
+    height: 100%;
+    background-color: #FCC872;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8em;
+    font-family: "Nico Moji";
+    font-size: 1.2em;
+    text-decoration: none;
+}
+
+.button-box a:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.3);
+}
+
+.startseite-btn {
+    background-color: #FFF7AF;
+    padding: 0.5625em 0.9375em 0.625em;
+    border-radius: 1.5625em;
+    border: 1px solid #234412;
+    text-decoration: none;
+    color: #234412;
+}
+
+.produkte-btn {
+    background-color: #FFF7AF;
+    padding: 0.5625em 0.9375em 0.625em;
+    border-radius: 1.5625em;
+    border: 1px solid #234412;
+    text-decoration: none;
+    color: #234412;
+}
+
+.kontakt-btn {
+    background-color: #FFF7AF;
+    padding: 0.5625em 0.9375em 0.625em;
+    border-radius: 1.5625em;
+    border: 1px solid #234412;
+    text-decoration: none;
+    color: #234412;
+}
+
+.dropdown-btn {
+    display: none;
+}
+
+/*---- BODY ----*/
+
+.body {
+    width: 90%;
+    height: 138em;
+    background-color: #FFF7AF;
+    display: flex;
+    border: 1px solid #234412;
+    border-top: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Acme;
+}
+
+.überschrift {
+    color: #234412;
+    font-family: Acme;
+    font-size: 4em;
+    letter-spacing: 0.15em;
+    display: flex;
+    margin: 1em 0 2em 0;
+    justify-content: center;
+}
+
+/* Höchste Qualität*/
+
+.höchsteQualität {
+    width: 72%;
+    background-color: #FFF7AF;
+    height: auto;
+    display: flex;
+    margin: 0em 0 0 0;
+    gap: 4em;
+}
+
+.textQualität {
+    width: 50%;
+    height: 24em;
+    background-color: #FFF7AF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bildQualität {
+    width: 50%;
+    height: 24em;
+    background-color: #FFF7AF;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.überschriftQualität {
+    text-align: center;
+    color: #234412;
+    font-size: 2em;
+    margin: 0em 0em 0em 0em;
+}
+
+.p-qualität {
+    color: #234412;
+    font-size: 1.35em;
+    line-height: 1.6em;
+}
+
+.imgQualität {
+    width: 100%;
+    height: 100%;
+}
+
+/* Nachhaltige Produkte*/
+
+.nachhaltigeProdukte {
+    width: 72%;
+    background-color: #FFF7AF;
+    height: auto;
+    display: flex;
+    margin: 5em 0 0 0;
+    gap: 4em;
+}
+
+.textProdukte {
+    width: 50%;
+    height: 24em;
+    background-color: #FFF7AF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bildProdukte {
+    width: 50%;
+    height: 24em;
+    background-color: #FFF7AF;
+    display: flex;
+    align-items: center;
+}
+
+.imgProdukt {
+    width: 100%;
+    height: 100%;
+}
+
+.überschriftProdukte {
+    color: #234412;
+    font-size: 2em;
+    margin: 0em 0em 0em 0em;
+}
+
+.p-produkte {
+    color: #234412;
+    font-size: 1.35em;
+    line-height: 1.6em;
+}
+
+/* Transparenz und Fairness*/
+
+.transparenzFairness {
+    width: 72%;
+    background-color: #FFF7AF;
+    height: auto;
+    display: flex;
+    margin: 5em 0 0 0;
+    gap: 4em;
+}
+
+.textFainess {
+    width: 50%;
+    height: 24em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bildFairness {
+    width: 50%;
+    height: 24em;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.überschriftFairness {
+    color: #234412;
+    font-size: 2em;
+    text-align: center;
+    margin: 0em 0em 0em 0em;
+}
+
+.p-fairness {
+    color: #234412;
+    font-size: 1.35em;
+    line-height: 1.6em;
+}
+
+.imgFairness {
+    width: 100%;
+    height: 100%;
+}
+
+/* Bester Service */
+
+.besterService {
+    width: 72%;
+    background-color: #FFF7AF;
+    height: auto;
+    display: flex;
+    margin: 5em 0 0 0;
+    gap: 4em;
+}
+
+.bildService {
+    width: 50%;
+    height: 24em;
+    display: flex;
+}
+
+.imgService {
+    width: 100%;
+    height: 100%;
+}
+
+.textService {
+    width: 50%;
+    height: 24em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.überschriftService {
+    color: #234412;
+    font-size: 2em;
+    margin: 0em 0em 0em 0em;
+}
+
+.p-service {
+    color: #234412;
+    font-size: 1.35em;
+    line-height: 1.6em;
+}
+
+/*---- FOOTER ----*/
+
+.footerContainer {
+    width: 100%;
+    height: 25vh;
+    background-color: #FCC872;
+    padding-top: 5%;
+}
+
+.footer {
+    background-color: #FCC872;
+    justify-content: center;
+    text-align: center;
+    font-size: 2em;
+    color: #234412;
+    font-family: Acme;
+}
+
+.text2 {
+    font-size: 1.3em;
+    color: rgb(35, 68, 18, 0.5);
+}
+
+/*---- MEDIA QUERIES ----*/
+
+/*- Media Querie für Bildschrime unter 1600px -*/
+
+@media (max-width: 1600px) {
+
+    .uberuns-page {
+        height: 155em;
+    }
+
+    /*-- Header --*/
+
+    .header-img {
+        height: 15em;
+    }
+
+    .iconbox {
+        width: 9em;
+        border-radius: 50px;
+    }
+
+    .buttonbox {
+        width: 79vw;
+        height: 2.7em;
+    }
+
+    .button-box {
+        font-size: 0.9em;
+    }
+
+    /*-- Body --*/
+
+    .body {
+        height: 120em;
+    }
+
+    /* Höchste Qualität */
+
+    .höchsteQualität {
+        gap: 4em;
+    }
+
+    .überschrift {
+        font-size: 3em;
+    }
+
+    .höchsteQualität {
+        align-items: center;
+    }
+
+    .textQualität {
+        height: 20em;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .überschriftQualität {
+        font-size: 1.7em;
+        margin: 0;
+    }
+
+    .p-qualität {
+        font-size: 1.15em;
+    }
+
+    .bildQualität {
+        height: 20em;
+        width: 50%;
+    }
+
+    /* Nachhaltige Produkte */
+
+    .nachhaltigeProdukte {
+        margin: 5em 0 0 0;
+        gap: 4em;
+    }
+
+    .textProdukte {
+        height: 20em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .überschriftProdukte {
+        font-size: 1.7em;
+        margin: 0;
+    }
+
+    .p-produkte {
+        font-size: 1.15em;
+    }
+
+    .bildProdukte {
+        height: 20em;
+    }
+
+    .imgProdukt {
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Transparenz und Fairness */
+
+    .transparenzFairness {
+        gap: 4em;
+    }
+
+    .textFainess {
+        width: 50%;
+        height: 20em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .überschriftFairness {
+        font-size: 1.7em;
+        margin: 0;
+    }
+
+    .p-fairness {
+        font-size: 1.15em;
+    }
+
+    .bildFairness {
+        height: 20em;
+        width: 50%;
+    }
+
+    .imgFairness {
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Bester Service */
+
+    .besterService {
+        margin: 5em 0 0 0;
+        gap: 4em;
+    }
+
+    .textService {
+        height: 20em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .überschriftService {
+        font-size: 1.7em;
+        margin: 0;
+    }
+
+    .p-service {
+        font-size: 1.15em;
+    }
+
+    .bildService {
+        height: 20em;
+    }
+
+    .imgService {
+        width: 100%;
+    }
+
+    /*-- Footer --*/
+
+    .footerContainer {
+        height: 25vh;
+    }
+
+    .footer {
+        font-size: 1.7em;
+    }
+
+    .text2 {
+        font-size: 1.3em;
+
+    }
+}
+
+/*- Media Querie für Bildschrime unter 1400px -*/
+
+@media (max-width: 1400px) {
+
+    .uberuns-page {
+        height: 145em;
+    }
+
+    /*-- Header --*/
+
+
+
+
+
+    /*-- Body --*/
+
+    .body {
+        height: 110em;
+    }
+
+    /* Höchste Qulität */
+
+    .textQualität {
+        height: 18em;
+    }
+
+    .überschriftQualität {
+        font-size: 1.4em;
+        margin: 0;
+    }
+
+    .p-qualität {
+        font-size: 1.03em;
+    }
+
+    .bildQualität {
+        height: 18em;
+    }
+
+    /* Nachhaltige Produkte */
+
+    .bildProdukte {
+        height: 18em;
+    }
+
+    .textProdukte {
+        height: 18em;
+    }
+
+    .überschriftProdukte {
+        font-size: 1.4em;
+        margin: 0;
+    }
+
+    .p-produkte {
+        font-size: 1.03em;
+        margin-bottom: 0em;
+    }
+
+    /* Transparenz und  Fairness */
+
+    .textFainess {
+        height: 18em;
+    }
+
+    .überschriftFairness {
+        font-size: 1.4em;
+        margin: 0;
+    }
+
+    .p-fairness {
+        font-size: 1.03em;
+        margin-bottom: 0em;
+    }
+
+    .bildFairness {
+        height: 18em;
+    }
+
+    /* Bester Service */
+
+    .bildService {
+        height: 18em;
+    }
+
+    .textService {
+        height: 18em;
+    }
+
+    .überschriftService {
+        font-size: 1.4em;
+        margin: 0;
+    }
+
+    .p-service {
+        font-size: 1.03em;
+        margin-bottom: 0em;
+    }
+
+    /*-- Footer --*/
+
+    .footerContainer {
+        height: 25vh;
+    }
+
+    .footer {
+        font-size: 1.7em;
+    }
+
+    .text2 {
+        font-size: 1.3em;
+
+    }
+}
+
+/*- Media Querie für Bildschrime unter 1200px -*/
+
+@media (max-width: 1200px) {
+
+    .uberuns-page {
+        height: 135em;
+    }
+
+    /*-- Header --*/
+
+
+
+
+
+    /*-- Body --*/
+
+    .body {
+        height: 100em;
+    }
+
+    /* Höchste Qulität */
+
+    .textQualität {
+        height: 16em;
+    }
+
+    .überschriftQualität {
+        font-size: 1.2em;
+        margin: 0;
+    }
+
+    .p-qualität {
+        font-size: 0.9em;
+    }
+
+    .bildQualität {
+        height: 16em;
+    }
+
+    /* Nachhaltige Produkte */
+
+    .bildProdukte {
+        height: 16em;
+    }
+
+    .textProdukte {
+        height: 16em;
+    }
+
+    .überschriftProdukte {
+        font-size: 1.2em;
+        margin: 0;
+    }
+
+    .p-produkte {
+        font-size: 0.9em;
+        margin-bottom: 0em;
+    }
+
+    /* Transparenz und  Fairness */
+
+    .textFainess {
+        height: 16em;
+    }
+
+    .überschriftFairness {
+        font-size: 1.2em;
+        margin: 0;
+    }
+
+    .p-fairness {
+        font-size: 0.9em;
+        margin-bottom: 0em;
+    }
+
+    .bildFairness {
+        height: 16em;
+    }
+
+    /* Bester Service */
+
+    .bildService {
+        height: 16em;
+    }
+
+    .textService {
+        height: 16em;
+    }
+
+    .überschriftService {
+        font-size: 1.2em;
+        margin: 0;
+    }
+
+    .p-service {
+        font-size: 0.9em;
+        margin-bottom: 0em;
+    }
+
+    /*-- Footer --*/
+
+    .footerContainer {
+        height: 25vh;
+    }
+
+    .footer {
+        font-size: 1.7em;
+    }
+
+    .text2 {
+        font-size: 1.3em;
+
+    }
+}
+
+/*- Media Querie für Bildschrime unter 1024px -*/
+
+@media (max-width: 1024px) {
+
+    .uberuns-page {
+        height: 120em;
+    }
+
+    /*-- Header --*/
+
+    .header-img {
+        height: 13em;
+    }
+
+
+
+    /*-- Body --*/
+
+    .body {
+        height: 90em;
+    }
+
+    .überschrift {
+        font-size: 2.33em;
+    }
+
+    /* Höchste Qulität */
+
+    .textQualität {
+        height: 14em;
+    }
+
+    .überschriftQualität {
+        font-size: 0.95em;
+        margin: 0;
+    }
+
+    .p-qualität {
+        font-size: 0.8em;
+    }
+
+    .bildQualität {
+        height: 14em;
+    }
+
+    /* Nachhaltige Produkte */
+
+    .bildProdukte {
+        height: 14em;
+    }
+
+    .textProdukte {
+        height: 14em;
+    }
+
+    .überschriftProdukte {
+        font-size: 0.95em;
+        margin: 0;
+    }
+
+    .p-produkte {
+        font-size: 0.8em;
+        margin-bottom: 0em;
+    }
+
+    /* Transparenz und  Fairness */
+
+    .textFainess {
+        height: 14em;
+    }
+
+    .überschriftFairness {
+        font-size: 0.95em;
+        margin: 0;
+    }
+
+    .p-fairness {
+        font-size: 0.8em;
+        margin-bottom: 0em;
+    }
+
+    .bildFairness {
+        height: 14em;
+    }
+
+    /* Bester Service */
+
+    .bildService {
+        height: 14em;
+    }
+
+    .textService {
+        height: 14em;
+    }
+
+    .überschriftService {
+        font-size: 0.95em;
+        margin: 0;
+    }
+
+    .p-service {
+        font-size: 0.8em;
+        margin-bottom: 0em;
+    }
+
+    /*-- Footer --*/
+
+    .footerContainer {
+        height: 25vh;
+    }
+
+    .footer {
+        font-size: 1.5em;
+    }
+
+    .text2 {
+        font-size: 1.1em;
+
+    }
+}
+
+/*- Media Querie für Bildschrime unter 830px -*/
+
+@media (max-width: 830px) {
+
+    .uberuns-page {
+        height: 100em;
+    }
+
+    /*-- Header --*/
+
+    .header-img {
+        height: 10em;
+    }
+
+    .iconbox {
+        width: 6em;
+        border-radius: 35px;
+    }
+
+    .buttonbox {
+        width: 75vw;
+        height: 2.2em;
+    }
+
+    .button-box {
+        font-size: 0.7em;
+    }
+
+    /*-- Body --*/
+
+    .body {
+        height: 72em;
+    }
+
+    .überschrift {
+        font-size: 2.1em;
+    }
+
+    /* Höchste Qulität */
+
+    .höchsteQualität {
+        gap: 1em;
+    }
+
+    .textQualität {
+        height: 12em;
+    }
+
+    .überschriftQualität {
+        font-size: 0.85em;
+        margin: 0;
+    }
+
+    .p-qualität {
+        font-size: 0.67em;
+    }
+
+    .bildQualität {
+        height: 12em;
+    }
+
+    /* Nachhaltige Produkte */
+
+    .nachhaltigeProdukte {
+        margin: 3em 0em 0em 0em;
+        gap: 1em;
+    }
+
+    .bildProdukte {
+        height: 12em;
+    }
+
+    .textProdukte {
+        height: 12em;
+    }
+
+    .überschriftProdukte {
+        font-size: 0.85em;
+        margin: 0;
+    }
+
+    .p-produkte {
+        font-size: 0.67em;
+        margin-bottom: 0em;
+    }
+
+    /* Transparenz und  Fairness */
+
+    .transparenzFairness {
+        margin: 3em 0em 0em 0em;
+        gap: 1em;
+    }
+
+    .textFainess {
+        height: 12em;
+    }
+
+    .überschriftFairness {
+        font-size: 0.85em;
+        margin: 0;
+    }
+
+    .p-fairness {
+        font-size: 0.67em;
+        margin-bottom: 0em;
+    }
+
+    .bildFairness {
+        height: 12em;
+    }
+
+    /* Bester Service */
+
+    .besterService {
+        margin: 3em 0 0 0;
+        gap: 1em;
+    }
+
+    .bildService {
+        height: 12em;
+    }
+
+    .textService {
+        height: 12em;
+    }
+
+    .überschriftService {
+        font-size: 0.85em;
+        margin: 0;
+    }
+
+    .p-service {
+        font-size: 0.67em;
+        margin-bottom: 0em;
+    }
+
+    /*-- Footer --*/
+
+    .footerContainer {
+        height: 25vh;
+    }
+
+    .footer {
+        font-size: 1.5em;
+    }
+
+    .text2 {
+        font-size: 1.1em;
+
+    }
+}
+
+/*- Media Querie für Bildschrime unter 668px -*/
+
+@media (max-width: 668px) {
+
+    .uberuns-page {
+        height: 75em;
+    }
+
+    /*-- Header --*/
+
+    .header-img {
+        height: 9em;
+    }
+
+    .iconbox {
+        width: 5em;
+        border-radius: 30px;
+    }
+
+    .buttonbox {
+        width: 74vw;
+        height: 2em;
+    }
+
+    .button-box {
+        font-size: 0.55em;
+    }
+
+    /*-- Body --*/
+
+    .body {
+        height: 59em;
+    }
+
+    .überschrift {
+        font-size: 1.8em;
+        margin: 0.5em 0em 0.5em 0em;
+    }
+
+    /* Höchste Qulität */
+
+    .höchsteQualität {
+        gap: 0.5em;
+        width: 85%;
+    }
+
+    .textQualität {
+        height: 12em;
+    }
+
+    .überschriftQualität {
+        font-size: 0.8em;
+        margin: 0;
+    }
+
+    .p-qualität {
+        font-size: 0.6em;
+    }
+
+    .bildQualität {
+        height: 10em;
+    }
+
+    /* Nachhaltige Produkte */
+
+    .nachhaltigeProdukte {
+        width: 85%;
+        margin: 0em 0em 0em 0em;
+        gap: 0.5em;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .bildProdukte {
+        height: 10em;
+    }
+
+    .textProdukte {
+        height: 12em;
+    }
+
+    .überschriftProdukte {
+        font-size: 0.8em;
+        margin: 0;
+    }
+
+    .p-produkte {
+        font-size: 0.6em;
+        margin-bottom: 0em;
+    }
+
+    /* Transparenz und  Fairness */
+
+    .transparenzFairness {
+        width: 85%;
+        margin: 0em 0em 0em 0em;
+        gap: 0.5em;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .textFainess {
+        height: 12em;
+    }
+
+    .überschriftFairness {
+        font-size: 0.8em;
+        margin: 0;
+    }
+
+    .p-fairness {
+        font-size: 0.6em;
+        margin-bottom: 0em;
+    }
+
+    .bildFairness {
+        height: 10em;
+    }
+
+    /* Bester Service */
+
+    .besterService {
+        width: 85%;
+        margin: 0em 0 0 0;
+        gap: 0.5em;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .bildService {
+        height: 11em;
+    }
+
+    .textService {
+        height: 12em;
+    }
+
+    .überschriftService {
+        font-size: 0.8em;
+        margin: 0;
+    }
+
+    .p-service {
+        font-size: 0.6em;
+        margin-bottom: 0em;
+    }
+
+    /*-- Footer --*/
+
+    .footerContainer {
+        height: 20vh;
+    }
+
+    .footer {
+        font-size: 1.2em;
+    }
+
+    .text2 {
+        font-size: 0.9em;
+
+    }
+}
+
+/*- Media Querie für Bildschrime unter 530px -*/
+
+@media (max-width: 530px) {
+
+    .uberuns-page {
+        height: 105em;
+    }
+
+    /*-- Header --*/
+
+    .header-img {
+        height: 11em;
+    }
+
+    .iconbox {
+        width: 2.8342em;
+        border-radius: 20px;
+        height: 2.141em;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        top: 1.3em;
+        left: 0.2em;
+    }
+
+    .iconIMG {
+        width: auto;
+        height: 110%;
+    }
+
+    .buttonbox {
+        width: 7em;
+        height: 9em;
+        position: relative;
+        left: 70%;
+        top: 1em;
+        background-color: rgba(0, 0, 0, 0);
+        margin: 0em 0em 0em 0em;
+        border: none;
+        box-shadow: none;
+    }
+
+    .button-box {
+        display: none;
+        font-size: 0.55em;
+        flex-direction: column;
+        gap: 0.5em;
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    .button-box.show {
+        display: flex;
+    }
+
+    .dropdown-btn {
+        display: block;
+        position: absolute;
+        top: 1.6em;
+        right: 2.5em;
+        width: auto;
+        background-color: #FCC872;
+        border: 1px solid #234412;
+        cursor: pointer;
+        z-index: 1000;
+        fill: #234412;
+        border-radius: 1.5em;
+        padding: 0.4em 0.8em 0.1em;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7);
+        transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s;
+    }
+
+    /*-- Body --*/
+
+    .body {
+        height: 85em;
+    }
+
+    .überschrift {
+        font-size: 1.6em;
+        margin: 0.5em 0em 0.5em 0em;
+    }
+
+    /* Höchste Qulität */
+
+    .höchsteQualität {
+        gap: 0.5em;
+        width: 85%;
+        flex-direction: column;
+        margin: 0.5em 0em 0em 0em;
+    }
+
+    .textQualität {
+        height: 7em;
+        width: 100%;
+    }
+
+    .überschriftQualität {
+        font-size: 0.8em;
+        margin: 0;
+    }
+
+    .p-qualität {
+        font-size: 0.6em;
+    }
+
+    .bildQualität {
+        height: 10em;
+        width: 70%;
+    }
+
+    /* Nachhaltige Produkte */
+
+    .nachhaltigeProdukte {
+        width: 85%;
+        margin: 2em 0em 0em 0em;
+        gap: 0.5em;
+        flex-direction: column-reverse;
+    }
+
+    .bildProdukte {
+        height: 10em;
+        width: 70%;
+    }
+
+    .textProdukte {
+        height: 7em;
+        width: 100%;
+    }
+
+    .überschriftProdukte {
+        font-size: 0.8em;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .p-produkte {
+        font-size: 0.6em;
+        margin-bottom: 0em;
+    }
+
+    /* Transparenz und  Fairness */
+
+    .transparenzFairness {
+        width: 85%;
+        margin: 2em 0em 0em 0em;
+        gap: 0.5em;
+        flex-direction: column;
+    }
+
+    .textFainess {
+        height: 7em;
+        width: 100%;
+    }
+
+    .überschriftFairness {
+        font-size: 0.8em;
+        margin: 0;
+    }
+
+    .p-fairness {
+        font-size: 0.6em;
+        margin-bottom: 0em;
+    }
+
+    .bildFairness {
+        height: 10em;
+        width: 70%;
+    }
+
+    /* Bester Service */
+
+    .besterService {
+        width: 85%;
+        margin: 2em 0em 0em 0em;
+        gap: 0.5em;
+        flex-direction: column-reverse;
+    }
+
+    .bildService {
+        height: 10em;
+        width: 70%;
+    }
+
+    .textService {
+        height: 7em;
+        width: 100%;
+    }
+
+    .überschriftService {
+        font-size: 0.8em;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .p-service {
+        font-size: 0.6em;
+        margin-bottom: 0em;
+    }
+
+    /*-- Footer --*/
+
+    .footerContainer {
+        height: 10vh;
+    }
+
+    .footer {
+        font-size: 1em;
+    }
+
+    .text2 {
+        font-size: 1em;
+
+    }
+}
+
+/*- Media Querie für Bildschrime unter 430px -*/
+
+@media (max-width: 430px) {
+
+    .uberuns-page {
+        height: 115em;
+    }
+
+    /*-- Header --*/
+
+    .header-img {
+        height: 11em;
+    }
+
+    .iconbox {
+        width: 2.8342em;
+        border-radius: 20px;
+        height: 2.141em;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        top: 1.3em;
+        left: 0.2em;
+    }
+
+    .iconIMG {
+        width: auto;
+        height: 110%;
+    }
+
+    .buttonbox {
+        width: 7em;
+        height: 9em;
+        position: relative;
+        left: 70%;
+        top: 1em;
+        background-color: rgba(0, 0, 0, 0);
+        margin: 0em 0em 0em 0em;
+        border: none;
+        box-shadow: none;
+    }
+
+    .button-box {
+        display: none;
+        font-size: 0.55em;
+        flex-direction: column;
+        gap: 0.5em;
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    .button-box.show {
+        display: flex;
+    }
+
+    .dropdown-btn {
+        display: block;
+        position: absolute;
+        top: 1.6em;
+        right: 2.5em;
+        width: auto;
+        background-color: #FCC872;
+        border: 1px solid #234412;
+        cursor: pointer;
+        z-index: 1000;
+        fill: #234412;
+        border-radius: 1.5em;
+        padding: 0.4em 0.8em 0.1em;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7);
+        transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s;
+    }
+
+    /*-- Body --*/
+
+    .body {
+        height: 95em;
+    }
+
+    .überschrift {
+        font-size: 1.6em;
+        margin: 1em 0em 1em 0em;
+    }
+
+    /* Höchste Qulität */
+
+    .höchsteQualität {
+        gap: 2em;
+        width: 85%;
+        flex-direction: column;
+        margin: 1em 0em 0em 0em;
+    }
+
+    .textQualität {
+        height: 7em;
+        width: 100%;
+    }
+
+    .überschriftQualität {
+        font-size: 0.8em;
+        margin: 0;
+    }
+
+    .p-qualität {
+        font-size: 0.6em;
+    }
+
+    .bildQualität {
+        height: 10em;
+        width: 70%;
+    }
+
+    /* Nachhaltige Produkte */
+
+    .nachhaltigeProdukte {
+        width: 85%;
+        margin: 3em 0em 0em 0em;
+        gap: 2em;
+        flex-direction: column-reverse;
+    }
+
+    .bildProdukte {
+        height: 10em;
+        width: 70%;
+    }
+
+    .textProdukte {
+        height: 7em;
+        width: 100%;
+    }
+
+    .überschriftProdukte {
+        font-size: 0.8em;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .p-produkte {
+        font-size: 0.6em;
+        margin-bottom: 0em;
+    }
+
+    /* Transparenz und  Fairness */
+
+    .transparenzFairness {
+        width: 85%;
+        margin: 3em 0em 0em 0em;
+        gap: 2em;
+        flex-direction: column;
+    }
+
+    .textFainess {
+        height: 7em;
+        width: 100%;
+    }
+
+    .überschriftFairness {
+        font-size: 0.8em;
+        margin: 0;
+    }
+
+    .p-fairness {
+        font-size: 0.6em;
+        margin-bottom: 0em;
+    }
+
+    .bildFairness {
+        height: 10em;
+        width: 70%;
+    }
+
+    /* Bester Service */
+
+    .besterService {
+        width: 85%;
+        margin: 3em 0em 0em 0em;
+        gap: 2em;
+        flex-direction: column-reverse;
+    }
+
+    .bildService {
+        height: 10em;
+        width: 70%;
+    }
+
+    .textService {
+        height: 7em;
+        width: 100%;
+    }
+
+    .überschriftService {
+        font-size: 0.8em;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .p-service {
+        font-size: 0.6em;
+        margin-bottom: 0em;
+    }
+
+    /*-- Footer --*/
+
+    .footerContainer {
+        height: 10vh;
+    }
+
+    .footer {
+        font-size: 1em;
+    }
+
+    .text2 {
+        font-size: 1em;
+
+    }
+}
+
+

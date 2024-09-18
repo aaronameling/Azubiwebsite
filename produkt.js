@@ -215,15 +215,18 @@ function createProductItem(product) {
 
 function displayProducts() {
     const productContainer = document.getElementById('produkt-boxen');
+    if (!productContainer) {
+        return
+    }
     products.forEach(product => {
         const productItem = createProductItem(product);
-        productContainer.appendChild(productItem);
+        productContainer?.appendChild(productItem);
     });
 }
 
 // 4. Initialisierung der Anzeige
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     displayProducts();
     checkScreenSize(); // Für den Dropdown Button
 
@@ -262,8 +265,11 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 // Event Listener für die Suche
-    document.getElementById('searchButton').addEventListener('click', searchProducts);
-    document.getElementById('searchInput').addEventListener('keyup', function(event) {
+    const searchButton = document.getElementById('searchButton')
+    const searchInput = document.getElementById('searchInput')
+    if (!searchButton || !searchInput) return;
+    searchButton.addEventListener('click', searchProducts);
+    searchInput.addEventListener('keyup', function (event) {
         if (event.key === 'Enter') { // Suche auch bei Enter-Taste
             searchProducts();
         }
@@ -277,6 +283,7 @@ function checkScreenSize() {
     const dropdownBtn = document.querySelector('.dropdown-btn');
     const headerNavButton = document.querySelector('.headerNav-button');
 
+    if (!dropdownBtn || !headerNavButton) return
     if (window.innerWidth > 580) {
         headerNavButton.style.display = 'flex';
         dropdownBtn.style.display = 'none';
@@ -286,7 +293,7 @@ function checkScreenSize() {
         dropdownBtn.style.display = 'block';
     }
 
-    dropdownBtn.addEventListener('click', function() {
+    dropdownBtn.addEventListener('click', function () {
         if (headerNavButton.style.display === 'none' || headerNavButton.style.display === '') {
             headerNavButton.style.display = 'flex';
         } else {
@@ -298,14 +305,13 @@ function checkScreenSize() {
 }
 
 
-
 // ------- Funktion für den Select (Sortierung) ----------------------
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const sortSelect = document.getElementById('sortieren');
     const produktBoxen = document.querySelector('.produkt-boxen');
-
-    sortSelect.addEventListener('change', function() {
+    if (!sortSelect) return
+    sortSelect.addEventListener('change', function () {
         const sortierenNach = this.value;
         let filteredProducts = [...products]; // Kopie des Originalproduktarrays erstellen
 
@@ -366,5 +372,6 @@ function saveProductDetails(event) {
 
     window.location.href = 'produktInfo2.html';  // Weiterleitung zur produktInfo2.html
 }
+
 
 
