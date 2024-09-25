@@ -1,0 +1,422 @@
+/*---- Global ----*/
+
+@font-face {
+    font-family: "Nico Moji";
+    src: url('fonts/NicoMoji-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Acme";
+    src: url('fonts/Acme-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.body {
+    height: 120vh;
+    width: 100vw;
+    background-color: #FFF7AF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Acme;
+    letter-spacing: 0.15em;
+}
+
+
+/*--- HEADER ---*/
+
+.header {
+    height: 15vh;
+    width: 95vw;
+    display: flex;
+    background-color: #ffffff;
+}
+
+.warenkorbH1 {
+    width: 50%;
+    height: 15vh;
+    background-color: #FFF7AF;
+    color: #234412;
+    display: flex;
+    align-items: flex-end;
+    font-size: 3em;
+}
+
+.weiterShoppen {
+    width: 50%;
+    height: 15vh;
+    background-color: #FFF7AF;
+    color: #234412;
+    display: flex;
+    align-items: flex-end;
+    font-size: 1.5em;
+    text-decoration: underline;
+    justify-content: flex-end;
+}
+
+.ankerA {
+    color: #234412;
+}
+
+.navigation {
+    height: 10vh;
+    width: 95vw;
+    display: flex;
+    background-color: #FFF7AF;
+    border-bottom: 2px solid rgba(35, 68, 18, 0.5);
+}
+
+.produkt {
+    height: 9vh;
+    width: 33.33%;
+    background-color: #FFF7AF;
+    color: rgba(35, 68, 18, 0.8);
+    display: flex;
+    align-items: flex-end;
+}
+
+.anzahl {
+    height: 9vh;
+    width: 33.33%;
+    background-color: #FFF7AF;
+    color: rgba(35, 68, 18, 0.8);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.gesamtsumme {
+    height: 9vh;
+    width: 33.33%;
+    background-color: #FFF7AF;
+    color: rgba(35, 68, 18, 0.8);
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+/*--- BODY ---*/
+
+.produkte {
+    height: 35vh;
+    width: 95vw;
+    background-color: #FFF7AF;
+    border-bottom: 2px solid rgba(35, 68, 18, 0.5);
+    display: flex;
+    align-items: center;
+}
+
+.produktInfo {
+    width: 55%;
+    height: 28vh;
+    background-color: #FFF7AF;
+    display: flex;
+}
+
+.infoIMG {
+    width: 30%;
+    height: 27vh;
+    border: 2px solid rgba(35, 68, 18, 0.5);
+}
+
+.rayquazaIMG {
+    width: 100%;
+}
+
+.infoTEXT {
+    width: 36%;
+    height: 27vh;
+    background-color: #FFF7AF;
+    margin-left: 7%;
+    display: flex;
+    flex-direction: column;
+    gap: 4%;
+}
+
+.infoH2 {
+    color: #234412;
+    font-size: 1.5em;
+}
+
+.infoP {
+    color: #234412;
+    font-size: 1.2em;
+}
+
+.produktAnzahl {
+    width: 40%;
+    height: 28vh;
+    background-color: #FFF7AF;
+    display: flex;
+}
+
+.anzahlButton {
+    width: 35%;
+    height: 30%;
+    background-color: #FFF7AF;
+    border: 2px solid rgba(35, 68, 18, 1);
+    display: flex;
+}
+
+.minusBTN {
+    background-color: #FFF7AF;
+    width: 33.33%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#BTN- {
+    border: none;
+    width: 50%;
+    height: 50%;
+    cursor: pointer;
+    font-size: 2em;
+    color: #234412;
+    background-color: rgba(255, 247, 175, 1);
+}
+
+#counter {
+    width: 33.33%;
+    height: 100%;
+    background-color: #FFF7AF;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    color: #234412;
+}
+
+.plusBTN {
+    background-color: #FFF7AF;
+    width: 33.33%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#BTN {
+    border: none;
+    width: 50%;
+    height: 50%;
+    cursor: pointer;
+    font-size: 2em;
+    color: #234412;
+    background-color: rgba(255, 247, 175, 1);
+ }
+
+.müllEimer {
+    width: 13%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#trashCan {
+    border: none;
+    padding: 0;
+    background-color: rgba(252, 200, 114, 0);
+    cursor: pointer;
+}
+
+.svg {
+    background-color: #FFF7AF;
+}
+
+.produktGesamtsumme {
+    width: 20%;
+    height: 28vh;
+    background-color: #FFF7AF;
+}
+
+.preis {
+    width: 100%;
+    height: 30%;
+    background-color: #FFF7AF;
+    color: #234412;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 1.5em;
+}
+
+/*--- FOOTER ---*/
+
+.footer {
+    width: 95vw;
+    height: 40vh;
+    background-color: #FFF7AF;
+    display: flex;
+   justify-content: flex-end;
+}
+
+.checkoutWindow {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.zwischensummenBOX {
+    width: 70%;
+    height: 15%;
+    display: flex;
+    margin-top: 5%;
+    justify-content: flex-end;
+    gap: 15%;
+}
+
+.zwischensumme {
+    background-color: #FFF7AF;
+    height: 100%;
+    color: #234412;
+}
+
+.summe {
+    display: flex;
+    background-color: #FFF7AF;
+    height: 100%;
+    color: #234412;
+}
+
+.zwischensummeINFO {
+    width: 70%;
+    height: 15%;
+    background-color: #FFF7AF;
+    display: flex;
+    margin: 0;
+    align-items: flex-end;
+    justify-content: flex-end;
+    color: #234412;
+}
+
+.AGBButton {
+    width: 55%;
+    height: 20%;
+    background-color: #FFF7AF;
+    border: 2px solid rgba(35, 68, 18, 1);
+    margin: 2% 0 0 0 ;
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.checkBOX {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    background-color: #FFF7AF;
+    align-items: center;
+    justify-content: center;
+    gap: 2%;
+}
+
+#checkbox1 {
+    border-radius: 4px;
+    appearance: none;
+    -webkit-appearance: none;
+    border: 2px solid #234412;
+    width: 1.7em;
+    height: 1.7em;
+    cursor: pointer;
+    background-color: #FFF7AF;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+#checkbox1:checked {
+    background-color: #234412;
+    border-color: #234412;
+}
+
+#checkbox1:checked::after {
+    content: "";
+    transform: rotate(45deg);
+    position: absolute;
+    margin-left: 5px;
+    border: 2.5px solid #FFF7AF;
+    border-top: none;
+    border-left: none;
+    width: 0.5em;
+    height: 1em;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.label1 {
+    color: #234412;
+}
+
+.auschecken1 {
+    margin-top: -0.7em;
+    width: 55.45%;
+    height: 50%;
+    background-color: rgba(252, 200, 114, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5%;
+}
+
+.auschecken2 {
+    width: 95%;
+    height: 40%;
+    background-color: #234412;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF7AF;
+    font-size: 1.5em;
+}
+
+#buttonCheckout {
+    background-color: rgba(252, 200, 114, 0);
+    width: 100%;
+    height: 100%;
+    border: none;
+    cursor: pointer;
+    font-family: Acme;
+    font-size: 1.2em;
+    letter-spacing: 0.15em;
+    color: #FFF7AF;
+}
+
+.paypal {
+    width: 95%;
+    height: 40%;
+    background-color: #FCC872;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#buttonPaypal {
+    background-color: rgba(252, 45, 45, 0);
+    color: #234412;
+    width: 100%;
+    height: 100%;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Acme;
+    font-size: 1.1em;
+    letter-spacing: 0.15em;
+    gap: 1%;
+}
+
+.paypalIMG {
+    width: 27%;
+}

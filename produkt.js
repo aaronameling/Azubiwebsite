@@ -9,7 +9,6 @@ const productDescriptions = {
             "Material: Hochwertiger Kunststoff",
             "Größe: 20 cm hoch",
             "Funktionalität: Kompatibel mit einer Vielzahl von Nintendo-Spielen, einschließlich Super Smash Bros., wo Mewtwo als spielbarer Charakter verfügbar ist.",
-            "Besonderheiten: Scannen Sie die Figur, um exklusive In-Game-Features freizuschalten, wie besondere Kostüme, Fähigkeiten oder andere einzigartige Inhalte."
         ],
         "endDescription": "Diese Mewtwo Amiibo-Figur ist ein beeindruckendes Sammlerstück und eignet sich perfekt, um Ihre Spielumgebung oder Ihr Regal zu verschönern. Mit seiner imposanten Größe von 20 cm bringt Mewtwo eine unvergleichliche Präsenz in Ihre Pokémon-Sammlung. Lassen Sie sich von der mystischen Aura und der mächtigen Erscheinung dieses legendären Pokémon begeistern."
     },

@@ -103,3 +103,36 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+
+//----- NEU --- Funktion zum auslesen der URL Parameter
+
+document.addEventListener('DOMContentLoaded', function() {
+    // HTML-Elemente für das Produkt
+    const imgElement = document.querySelector('.produktImg'); // Bild-Element
+    const nameElement = document.querySelector('.kaufboxH2'); // Produktname
+    const infoElement = document.querySelector('.kaufboxH3'); // Produktinfo
+
+    // Produktdetails aus dem localStorage abrufen
+    const productImg = localStorage.getItem('selectedProductImg');
+    const productName = localStorage.getItem('selectedProductName');
+    const productInfo = localStorage.getItem('selectedProductInfo');
+
+    // Überprüfen, ob die Daten vorhanden sind
+    if (productImg) {
+        imgElement.src = productImg;
+    }
+    if (productName) {
+        nameElement.textContent = productName;
+    }
+    if (productInfo) {
+        infoElement.textContent = productInfo;
+    }
+
+    // Optional: Lösche den localStorage, um Platz für neue Auswahl zu schaffen
+    localStorage.clear();
+});
+
+
+
+
+
