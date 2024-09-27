@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="warenkorb.css">
+    <script src="warenkorb.js"></script>
 </head>
 <body>
 
@@ -20,6 +21,7 @@
             <div class="anzahl">ANZAHL</div>
             <div class="gesamtsumme">GESAMTSUMME</div>
         </div>
+<!------------------------------------------------------------------------------>
         <div class="produkte">
             <div class="produktInfo">
                 <div class="infoIMG">
@@ -27,19 +29,21 @@
                 </div>
                 <div class="infoTEXT">
                     <div class="infoH2">Rayquaza Actionfigur</div>
-                    <div class="infoP">€49,99</div>
+                    <div class="infoP">€49.99</div>
                 </div>
             </div>
+
             <div class="produktAnzahl">
                 <div class="anzahlButton">
                     <div class="minusBTN">
-                        <button id="BTN-">-</button>
+                        <button id="minusBTN">-</button>
                     </div>
                     <p id="counter">1</p>
                     <div class="plusBTN">
-                        <button id="BTN">+</button>
+                        <button id="plusBTN">+</button>
                     </div>
                 </div>
+
                 <div class="müllEimer">
                     <button id="trashCan">
                         <svg class="svg" xmlns="http://www.w3.org/2000/svg" height="3em" viewBox="0 -960 960 960" width="3em" fill="#234412">
@@ -50,8 +54,9 @@
                 </div>
             </div>
             <div class="produktGesamtsumme">
-                <div class="preis">€49,99</div>
+                <div id="preisPro" class="preis">49.99</div>
             </div>
+<!------------------------------------------------------------------------------>
         </div>
         <div class="footer">
             <div class="checkoutWindow">
