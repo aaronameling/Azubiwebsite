@@ -20,7 +20,7 @@ body {
 }
 
 .body {
-    height: 120vh;
+    height: auto;
     width: 100vw;
     background-color: #FFF7AF;
     display: flex;
@@ -105,11 +105,19 @@ body {
 
 /*--- BODY ---*/
 
-.produkte {
+.produkte0 {
     height: 35vh;
     width: 95vw;
     background-color: #FFF7AF;
     border-bottom: 2px solid rgba(35, 68, 18, 0.5);
+    display: flex;
+    flex-direction: column;
+}
+
+.produkte {
+    height: 35vh;
+    width: 95vw;
+    background-color: #FFF7AF;
     display: flex;
     align-items: center;
 }
