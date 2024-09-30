@@ -54,7 +54,7 @@ function generiereProduktHTML(produkt) {
 // Funktion, um das generierte HTML in den Platzhalter einzufügen
 function ladeProduktInContainer() {
     // Hole den Container mit der Klasse "produkte0"
-    const container = document.querySelector(".produkte0");
+    const container = document.querySelector("produkte0");
 
     // Generiere das HTML für das Produkt und füge es in den Container ein
     container.innerHTML = generiereProduktHTML(produkt);
@@ -66,24 +66,23 @@ function ladeProduktInContainer() {
 
 // -------------------- FUNKTION ZUM LADEN DES PRODUKTS IN DEN CONTAINER --------------------------
 
+// Funktion, um das generierte HTML in den Platzhalter einzufügen
 function ladeProduktInContainer() {
-    // Hole den Container mit der Klasse "produkte0"
-    const container = document.querySelector(".produkte0");
+    const container = document.getElementById("produkte0");
 
-    // Überprüfe, ob der Container gefunden wurde
-    if (!container) {
-        console.error("Das Platzhalter-Div mit der Klasse 'produkte0' wurde nicht gefunden.");
-        return;
+    // Überprüfe, ob der Artikel im localStorage als hinzugefügt markiert ist
+    const produktHinzugefuegt = localStorage.getItem('produktHinzugefuegt');
+
+    // Falls das Produkt als hinzugefügt markiert ist, zeige es im Warenkorb an
+    if (produktHinzugefuegt === 'true') {
+        container.innerHTML = generiereProduktHTML(produkt);
+
+        // ---- Hier den Aufruf der Event-Listener-Initialisierung hinzufügen ----
+        initialisiereEventListener(); // Füge diese Zeile hinzu, um die Event-Listener zu aktivieren
+    } else {
+        console.log("Warenkorb ist leer.");
     }
-
-    // Generiere das HTML für das Produkt und füge es in den Container ein
-    container.innerHTML = generiereProduktHTML(produkt);
-
-    // Event-Listener nach dem Laden des Produkts initialisieren
-    initialisiereEventListener();
 }
-
-
 
 // -------------------- FUNKTION ZUM ERHÖHEN/VERRINGERN DER PRODUKTE + ANPASSUNG DES PREISES --------------------------
 
@@ -93,6 +92,7 @@ function initialisiereEventListener() {
     const plusBTN = document.getElementById('plusBTN')
     const counter = document.getElementById('counter')
     const preis = document.getElementById('preisPro')
+    const trashCan = document.getElementById('trashCan')
 
     // Überprüfen, ob die Elemente existieren, bevor Listener hinzugefügt werden
     if (!minusBTN || !plusBTN || !counter || !preis) {
@@ -115,6 +115,14 @@ function initialisiereEventListener() {
             counter.textContent = currentValue - 1;
             preis.textContent =  (currentCost - 49.99).toFixed(2);
         }
+    });
+    //    Funktion zum entfernen einens Produktes
+    trashCan.addEventListener('click', function() {
+        const container = document.getElementById("produkte0");
+        container.innerHTML = "";
+
+        // Debugging: Konsolenausgabe
+        console.log("Das Produkt wurde aus dem Warenkorb entfernt.");
     });
 }
 

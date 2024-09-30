@@ -1,6 +1,7 @@
-// ----- Dropdown Button -----
 
+// Überprüfe, ob das Dokument geladen ist, und füge alle Event-Listener hinzu
 document.addEventListener('DOMContentLoaded', function() {
+    // ----- Dropdown Button -----
     const dropdownBtn = document.querySelector('.dropdown-btn');
     const headerNavButton = document.querySelector('.header-navButton');
 
@@ -25,11 +26,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     window.addEventListener('resize', checkScreenSize);
     checkScreenSize();
-});
 
-// ----- Mengen button -----
+    // ----- Mengen button -----
 
-document.addEventListener("DOMContentLoaded", function() {
     // Wähle die Elemente aus dem DOM aus
     const minusBtn = document.getElementById('minusBTN');
     const plusBtn = document.getElementById('plusBTN');
@@ -48,11 +47,8 @@ document.addEventListener("DOMContentLoaded", function() {
             counter.textContent = currentValue - 1;
         }
     });
-});
 
-//-------- Funktion zum auslesen der URL Parameter
-
-document.addEventListener('DOMContentLoaded', function() {
+    //-------- Funktion zum auslesen der URL Parameter
     const imgElement = document.querySelector('.produktImg'); // Bild-Element
     const nameElement = document.querySelector('.kaufboxH2'); // Produktname
     const infoElement = document.querySelector('.kaufboxH3'); // Produktinfo
@@ -100,37 +96,29 @@ document.addEventListener('DOMContentLoaded', function() {
         // Endbeschreibung (p3)
         endDescriptionElement.textContent = product.endDescription;
     }
+
+    // -------- NEU: Funktion zum Hinzufügen des Produkts in den Warenkorb --------
+    const warenkorbBTN = document.getElementById('warenkorbBTN');
+
+    // Wenn der "In den Warenkorb"-Button geklickt wird
+    if (warenkorbBTN) {
+        warenkorbBTN.addEventListener('click', function(event) {
+            // Standardverhalten verhindern, damit die Seite nicht sofort wechselt
+            event.preventDefault();
+
+            // Speichere die Information im localStorage
+            localStorage.setItem('produktHinzugefuegt', 'true');
+
+            // Debug: Überprüfe, ob der Wert korrekt gesetzt wurde
+            console.log("Produkt wurde hinzugefügt:", localStorage.getItem('produktHinzugefuegt'));
+
+            // Manuelles Weiterleiten zur Warenkorb-Seite
+            window.location.href = "warenkorb.html";
+        });
+    }
 });
 
 
-
-//----- NEU --- Funktion zum auslesen der URL Parameter
-
-document.addEventListener('DOMContentLoaded', function() {
-    // HTML-Elemente für das Produkt
-    const imgElement = document.querySelector('.produktImg'); // Bild-Element
-    const nameElement = document.querySelector('.kaufboxH2'); // Produktname
-    const infoElement = document.querySelector('.kaufboxH3'); // Produktinfo
-
-    // Produktdetails aus dem localStorage abrufen
-    const productImg = localStorage.getItem('selectedProductImg');
-    const productName = localStorage.getItem('selectedProductName');
-    const productInfo = localStorage.getItem('selectedProductInfo');
-
-    // Überprüfen, ob die Daten vorhanden sind
-    if (productImg) {
-        imgElement.src = productImg;
-    }
-    if (productName) {
-        nameElement.textContent = productName;
-    }
-    if (productInfo) {
-        infoElement.textContent = productInfo;
-    }
-
-    // Optional: Lösche den localStorage, um Platz für neue Auswahl zu schaffen
-    localStorage.clear();
-});
 
 
 
