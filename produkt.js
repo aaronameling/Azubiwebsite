@@ -224,89 +224,90 @@ function displayProducts() {
 }
 
 // 4. Initialisierung der Anzeige
-
 document.addEventListener('DOMContentLoaded', function () {
     displayProducts();
     checkScreenSize(); // Für den Dropdown Button
 
 
-// ----- Suchfunktion -------------------------
-
-    function searchProducts() {
-        const searchInput = document.getElementById('searchInput').value.toLowerCase().trim();
-        console.log('Search Input:', searchInput); // Debugging: Überprüfe die Suchanfrage
-
-        if (searchInput === '') {
-            console.log('Suchfeld ist leer. Zeige alle Produkte an.');
-            displayProducts(); // Zeigt alle Produkte an, wenn das Suchfeld leer ist
-            return;
-        }
-
-        const filteredProducts = products.filter(product =>
-            product.name.toLowerCase().includes(searchInput)
-        );
-
-        console.log('Filtered Products:', filteredProducts); // Debugging: Überprüfe gefilterte Produkte
-
-        // Zeige nur gefilterte Produkte an
-        const productContainer = document.getElementById('produkt-boxen');
-        productContainer.innerHTML = ''; // Leert die Liste, um alle alten Produkte zu entfernen
-
-        if (filteredProducts.length > 0) {
-            filteredProducts.forEach(product => {
-                const productItem = createProductItem(product);
-                productContainer.appendChild(productItem);
-            });
-        } else {
-            console.log('Keine Produkte gefunden.'); // Debugging: Ausgabe, wenn keine Produkte gefunden wurden
-            productContainer.innerHTML = '<p>Keine Produkte gefunden.</p>'; // Anzeige, wenn keine Produkte gefunden wurden
-        }
-    }
-
-// Event Listener für die Suche
-    const searchButton = document.getElementById('searchButton')
-    const searchInput = document.getElementById('searchInput')
-    if (!searchButton || !searchInput) return;
-    searchButton.addEventListener('click', searchProducts);
-    searchInput.addEventListener('keyup', function (event) {
-        if (event.key === 'Enter') { // Suche auch bei Enter-Taste
-            searchProducts();
-        }
+// **----- HIER NEUEN CODE HINZUFÜGEN -----**
+    // **Füge Event-Listener zu allen Produkt-Items hinzu**:
+    const produktListe = document.querySelectorAll('.produkt-item');
+    produktListe.forEach(produktElement => {
+        produktElement.addEventListener('click', saveProductDetails);  // **Füge Event-Listener hinzu**
     });
-});
+// **--------------------------------------**
 
 
-// ------- Funktion für den Dropdown Button ----------------
+        // ----- Suchfunktion ------
+        function searchProducts() {
+            const searchInput = document.getElementById('searchInput').value.toLowerCase().trim();
+            console.log('Search Input:', searchInput); // Debugging: Überprüfe die Suchanfrage
 
-function checkScreenSize() {
-    const dropdownBtn = document.querySelector('.dropdown-btn');
-    const headerNavButton = document.querySelector('.headerNav-button');
+            if (searchInput === '') {
+                console.log('Suchfeld ist leer. Zeige alle Produkte an.');
+                displayProducts(); // Zeigt alle Produkte an, wenn das Suchfeld leer ist
+                return;
+            }
 
-    if (!dropdownBtn || !headerNavButton) return
-    if (window.innerWidth > 580) {
-        headerNavButton.style.display = 'flex';
-        dropdownBtn.style.display = 'none';
-        headerNavButton.classList.remove('show');
-    } else {
-        headerNavButton.style.display = 'none';
-        dropdownBtn.style.display = 'block';
-    }
+            const filteredProducts = products.filter(product =>
+                product.name.toLowerCase().includes(searchInput)
+            );
 
-    dropdownBtn.addEventListener('click', function () {
-        if (headerNavButton.style.display === 'none' || headerNavButton.style.display === '') {
+            console.log('Filtered Products:', filteredProducts); // Debugging: Überprüfe gefilterte Produkte
+
+            // Zeige nur gefilterte Produkte an
+            const productContainer = document.getElementById('produkt-boxen');
+            productContainer.innerHTML = ''; // Leert die Liste, um alle alten Produkte zu entfernen
+
+            if (filteredProducts.length > 0) {
+                filteredProducts.forEach(product => {
+                    const productItem = createProductItem(product);
+                    productContainer.appendChild(productItem);
+                });
+            } else {
+                console.log('Keine Produkte gefunden.'); // Debugging: Ausgabe, wenn keine Produkte gefunden wurden
+                productContainer.innerHTML = '<p>Keine Produkte gefunden.</p>'; // Anzeige, wenn keine Produkte gefunden wurden
+            }
+        }
+
+    // Event Listener für die Suche
+        const searchButton = document.getElementById('searchButton')
+        const searchInput = document.getElementById('searchInput')
+        if (!searchButton || !searchInput) return;
+        searchButton.addEventListener('click', searchProducts);
+        searchInput.addEventListener('keyup', function (event) {
+            if (event.key === 'Enter') { // Suche auch bei Enter-Taste
+                searchProducts();
+            }
+        });
+
+    // ------- Funktion für den Dropdown Button ----------------
+    function checkScreenSize() {
+        const dropdownBtn = document.querySelector('.dropdown-btn');
+        const headerNavButton = document.querySelector('.headerNav-button');
+
+        if (!dropdownBtn || !headerNavButton) return
+        if (window.innerWidth > 580) {
             headerNavButton.style.display = 'flex';
+            dropdownBtn.style.display = 'none';
+            headerNavButton.classList.remove('show');
         } else {
             headerNavButton.style.display = 'none';
+            dropdownBtn.style.display = 'block';
         }
-    });
 
-    window.addEventListener('resize', checkScreenSize);
-}
+        dropdownBtn.addEventListener('click', function () {
+            if (headerNavButton.style.display === 'none' || headerNavButton.style.display === '') {
+                headerNavButton.style.display = 'flex';
+            } else {
+                headerNavButton.style.display = 'none';
+            }
+        });
 
+        window.addEventListener('resize', checkScreenSize);
+    }
 
-// ------- Funktion für den Select (Sortierung) ----------------------
-
-document.addEventListener("DOMContentLoaded", function () {
+    // ------- Funktion für den Select (Sortierung) ----------------------
     const sortSelect = document.getElementById('sortieren');
     const produktBoxen = document.querySelector('.produkt-boxen');
     if (!sortSelect) return
@@ -333,44 +334,59 @@ document.addEventListener("DOMContentLoaded", function () {
             produktBoxen.appendChild(productItem);
         });
     });
+
+    // ------- Funktion zur Handhabung der Produktdetails -------------
+    function saveProductDetails(event) {
+        event.preventDefault();  // Verhindert das Standardverhalten des Links
+
+        const productItem = event.target.closest('.produkt-item');
+
+        if (!productItem) {
+            console.error('Produkt-Element nicht gefunden.');
+            return;
+        }
+
+        const imgElement = productItem.querySelector('.produkt-img');
+        if (!imgElement) {
+            console.error('Bild-Element nicht gefunden.');
+            return;
+        }
+
+        const imgSrc = imgElement.src;
+        const productName = productItem.getAttribute('data-name');
+        const productInfo = productItem.getAttribute('data-info');
+        const productId = productItem.getAttribute('data-id');
+        const productPrice = parseFloat(productItem.getAttribute('data-preis')); // **ParseFloat hinzugefügt**
+
+        if (!imgSrc || !productName || !productInfo || !productId || isNaN(productPrice)) {
+            console.error('Produktdetails fehlen.', { imgSrc, productName, productInfo, productId, productPrice });
+            return;
+        }
+
+        // **-----Neuer Code: Produktdetails als Objekt speichern-----**
+        const ausgewaehltesProdukt = {
+            id: productId,
+            name: productName,
+            preis: productPrice,
+            bild: imgSrc
+        };
+        localStorage.setItem('ausgewaehltesProdukt', JSON.stringify(ausgewaehltesProdukt));  // **Speichere Produkt im LocalStorage**
+        // -----------------------------------------------------
+
+        // Debugging: Überprüfen, ob das Produkt korrekt gespeichert wurde
+        console.log("Ausgewähltes Produkt gespeichert:", JSON.parse(localStorage.getItem('ausgewaehltesProdukt')));
+
+        localStorage.setItem('selectedProductImg', imgSrc);
+        localStorage.setItem('selectedProductName', productName);
+        localStorage.setItem('selectedProductInfo', productInfo);
+        localStorage.setItem('selectedProductId', productId);
+
+        window.location.href = 'produktInfo2.html';  // Weiterleitung zur produktInfo2.html
+    }
 });
 
 
-// ------- Funktion zur Handhabung der Produktdetails -------------
 
-function saveProductDetails(event) {
-    event.preventDefault();  // Verhindert das Standardverhalten des Links
-
-    const productItem = event.target.closest('.produkt-item');
-
-    if (!productItem) {
-        console.error('Produkt-Element nicht gefunden.');
-        return;
-    }
-
-    const imgElement = productItem.querySelector('.produkt-img');
-    if (!imgElement) {
-        console.error('Bild-Element nicht gefunden.');
-        return;
-    }
-
-    const imgSrc = imgElement.src;
-    const productName = productItem.getAttribute('data-name');
-    const productInfo = productItem.getAttribute('data-info');
-    const productId = productItem.getAttribute('data-id');
-
-    if (!imgSrc || !productName || !productInfo || !productId) {
-        console.error('Produktdetails fehlen.');
-        return;
-    }
-
-    localStorage.setItem('selectedProductImg', imgSrc);
-    localStorage.setItem('selectedProductName', productName);
-    localStorage.setItem('selectedProductInfo', productInfo);
-    localStorage.setItem('selectedProductId', productId);
-
-    window.location.href = 'produktInfo2.html';  // Weiterleitung zur produktInfo2.html
-}
 
 
 

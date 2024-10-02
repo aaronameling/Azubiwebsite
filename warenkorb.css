@@ -106,7 +106,8 @@ body {
 /*--- BODY ---*/
 
 .produkte0 {
-    height: 35vh;
+    min-height: 35vh;
+    height: auto;
     width: 95vw;
     background-color: #FFF7AF;
     border-bottom: 2px solid rgba(35, 68, 18, 0.5);
@@ -245,6 +246,7 @@ body {
     width: 20%;
     height: 28vh;
     background-color: #FFF7AF;
+    display: flex;
 }
 
 .preis {
