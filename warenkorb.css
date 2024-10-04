@@ -134,10 +134,13 @@ body {
     width: 30%;
     height: 27vh;
     border: 2px solid rgba(35, 68, 18, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .rayquazaIMG {
-    width: 100%;
+    width: 90%;
 }
 
 .infoTEXT {
@@ -158,6 +161,12 @@ body {
 .infoP {
     color: #234412;
     font-size: 1.2em;
+    display: flex;
+}
+
+.MwSt {
+    font-size: 0.9em;
+    margin:  1px 0 0 0;
 }
 
 .produktAnzahl {
@@ -429,4 +438,404 @@ body {
 
 .paypalIMG {
     width: 27%;
+}
+
+/*----- MEDIA QUERRIES -----*/
+
+/* Media Query für Bildschirme unter 1700px */
+
+@media (max-width: 1700px) {
+    .weiterShoppen {
+        font-size: 1.2em;
+    }
+
+    .warenkorbH1 {
+        font-size: 2.5em;
+    }
+
+    .produkt {
+        font-size: 0.8em;
+    }
+
+    .anzahl {
+        font-size: 0.8em;
+    }
+
+    .gesamtsumme {
+        font-size: 0.8em;
+    }
+
+    /*-----------------------------------*/
+    .rayquazaIMG {
+        width: 85%;
+    }
+
+    .infoIMG {
+        height: 23vh;
+    }
+
+    .infoH2 {
+        font-size: 1.3em;
+    }
+
+    .infoP {
+        font-size: 1.1em;
+    }
+
+    .MwSt {
+        font-size: 0.7em;
+        margin: 4px 0 0 0;
+    }
+
+    /*-----*/
+    .anzahlButton {
+        width: 25%;
+        height: 20%;
+    }
+
+    #counter {
+        font-size: 1.3em;
+    }
+
+    .minusBTN {
+        font-size: 0.8em;
+    }
+
+    .plusBTN {
+        font-size: 0.8em;
+    }
+
+    .müllEimer {
+        width: 10%;
+        height: 20%;
+    }
+
+    .svg {
+        height: 2em;
+        width: 2em;
+    }
+
+    /*-----*/
+    .preis {
+        font-size: 1.1em;
+        height: 20%;
+    }
+
+    /*-----------------------------------*/
+    .zwischensumme {
+        font-size: 1.2em;
+    }
+
+    .summe {
+        font-size: 1.2em;
+    }
+
+    .zwischensummeINFO {
+        font-size: 0.85em;
+    }
+
+    .label1 {
+        color: #234412;
+        font-size: 0.8em;
+    }
+
+    .checkBOX {
+        width: 60%;
+    }
+
+    .auschecken2 {
+        font-size: 1.2em;
+    }
+
+    #buttonPaypal {
+        font-size: 0.9em;
+    }
+
+    .paypalIMG {
+        width: 23%;
+    }
+}
+
+/*----- MEDIA QUERRIES -----*/
+
+/* Media Query für Bildschirme unter 1400px */
+
+@media (max-width: 1400px) {
+    .warenkorbH1 {
+        font-size: 2.3em;
+    }
+
+    .weiterShoppen {
+        font-size: 1.1em;
+    }
+
+    .produkt {
+        font-size: 0.7em;
+    }
+
+    .anzahl {
+        font-size: 0.7em;
+    }
+
+    .gesamtsumme {
+        font-size: 0.7em;
+    }
+
+    .infoIMG {
+        height: 20vh;
+    }
+
+    .infoTEXT {
+        margin-left: 3%;
+    }
+
+    .infoH2 {
+        font-size: 1.2em;
+    }
+
+    .infoP {
+        font-size: 1em;
+    }
+
+/*--------------------------*/
+
+    .plusBTN {
+        justify-content: flex-start;
+        font-size: 0.7em;
+    }
+
+    .minusBTN {
+        justify-content: flex-end;
+        font-size: 0.7em;
+        margin-bottom: 8px;
+    }
+
+    .anzahlButton {
+        width: 24%;
+        height: 16%;
+    }
+
+    #counter {
+        font-size: 1.2em;
+    }
+
+    .müllEimer {
+        width: 10%;
+        height: 16%;
+    }
+
+    .preis {
+        font-size: 1.1em;
+        height: 16%;
+    }
+
+/*--------------------------*/
+
+    .zwischensumme {
+        font-size: 1.1em;
+    }
+
+    .summe {
+        font-size: 1.1em;
+    }
+
+    .zwischensummeINFO {
+        font-size: 0.7em;
+    }
+
+    .AGBButton {
+        height: 15%;
+    }
+
+    #checkbox1 {
+        width: 1.5em;
+        height: 1.5em;
+    }
+
+    #checkbox1:checked::after {
+        margin-left: 4px;
+    }
+
+    .label1 {
+        color: #234412;
+        font-size: 0.7em;
+    }
+
+    .auschecken2 {
+        height: 30%;
+        font-size: 1em;
+    }
+
+    .paypal {
+        height: 30%;
+    }
+
+    .paypalIMG {
+        width: 20%;
+    }
+
+    #buttonPaypal {
+        font-size: 0.8em;
+    }
+
+    .paypalIMG {
+        width: 20%;
+    }
+}
+
+/*----- MEDIA QUERRIES -----*/
+
+/* Media Query für Bildschirme unter 1180px */
+
+@media (max-width: 1180px) {
+    .warenkorbH1 {
+        font-size: 2.1em;
+    }
+
+    .weiterShoppen {
+        font-size: 1em;
+    }
+
+    .produkt {
+        font-size: 0.6em;
+    }
+
+    .anzahl {
+        font-size: 0.6em;
+    }
+
+    .gesamtsumme {
+        font-size: 0.6em;
+    }
+
+/*-----------------------------------------*/
+
+    .infoIMG {
+        height: 18vh;
+    }
+
+    .infoTEXT {
+        height: 18vh;
+    }
+
+    .infoH2 {
+        font-size: 1em;
+    }
+
+    .infoP {
+        font-size: 0.9em;
+    }
+
+    .minusBTN {
+        justify-content: center;
+    }
+
+/*-----------------------------------------*/
+
+    .zwischensummeINFO {
+        font-size: 0.6em;
+        width: 90%;
+    }
+
+    .checkBOX {
+        width: 75%;
+    }
+
+    #buttonCheckout {
+        font-size: 1.1em;
+    }
+}
+
+
+/*----- MEDIA QUERRIES -----*/
+
+/* Media Query für Bildschirme unter 980px */
+
+@media (max-width: 980px) {
+    .minusBTN {
+        justify-content: center;
+        font-size: 0.7em;
+        margin-bottom: 8px;
+    }
+
+    #counter {
+        font-size: 1.1em;
+    }
+
+    .preis {
+        font-size: 1em;
+        height: 16%;
+    }
+
+    /*-----------------------------------------*/
+
+    .checkoutWindow {
+        width: 65%;
+    }
+
+    .zwischensumme {
+        font-size: 1.05em;
+    }
+
+    .summe {
+        font-size: 1.05em;
+    }
+
+    .AGBButton {
+        height: 12%;
+    }
+
+    .auschecken2 {
+        height: 24%;
+    }
+
+    .paypal {
+        height: 24%;
+    }
+}
+
+/*----- MEDIA QUERRIES -----*/
+
+/* Media Query für Bildschirme unter 800px */
+
+@media (max-width: 800px) {
+    .infoIMG {
+        height: 14vh;
+    }
+
+    .produktAnzahl {
+        gap: 5px;
+    }
+
+    .anzahlButton {
+        width: 28%;
+        height: 12%;
+    }
+
+    .minusBTN {
+        margin-bottom: 8px;
+        font-size: 0.5em;
+    }
+
+    .plusBTN {
+        margin-bottom: 4px;
+        font-size: 0.5em;
+    }
+
+    .müllEimer {
+        width: 10%;
+        height: 14%;
+    }
+
+    .checkoutWindow {
+        width: 83%;
+    }
+}
+
+/*----- MEDIA QUERRIES -----*/
+
+/* Media Query für Bildschirme unter 600px */
+
+@media (max-width: 600px) {
+
 }

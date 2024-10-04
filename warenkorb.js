@@ -75,7 +75,7 @@ function generiereProduktHTML(produkt) {
             </div>
             <div class="infoTEXT">
                 <div class="infoH2">${produkt.name}</div>
-                <div class="infoP">€${produkt.preis.toFixed(2)}</div>
+                <div class="infoP">€${produkt.preis.toFixed(2)}<p class="MwSt">(inkl.MwSt.)</p></div>
             </div>
         </div>
     
