@@ -80,6 +80,7 @@ function generiereProduktHTML(produkt) {
         </div>
     
         <div class="produktAnzahl">
+       
             <div class="anzahlButton">
                 <div class="minusBTN">
                     <button id="minusBTN">-</button>
@@ -98,6 +99,8 @@ function generiereProduktHTML(produkt) {
                     </svg>
                 </button>
             </div>
+     
+        
         </div>
     
         <div class="produktGesamtsumme">
