@@ -17,6 +17,7 @@
 body {
     padding: 0;
     margin: 0;
+    background-color: #FFF7AF;
 }
 
 .body {
@@ -37,7 +38,7 @@ body {
     height: 15vh;
     width: 95vw;
     display: flex;
-    background-color: #ffffff;
+    background-color: #FFF7AF;
 }
 
 .warenkorbH1 {
@@ -567,6 +568,11 @@ body {
 /* Media Query für Bildschirme unter 1400px */
 
 @media (max-width: 1400px) {
+
+    .body {
+        width: 100%;
+    }
+
     .warenkorbH1 {
         font-size: 2.3em;
     }
@@ -683,4 +689,519 @@ body {
         height: 32%;
     }
 }
+
+/*----- MEDIA QUERRIES -----*/
+
+/* Media Query für Bildschirme unter 1025px */
+
+@media (max-width: 1025px) and (orientation: portrait) {
+    .header {
+        width: 90vw;
+    }
+
+    .body {
+        width: 100%;
+    }
+
+    .warenkorbH1 {
+        font-size: 3em;
+    }
+
+    .weiterShoppen {
+        font-size: 1.8em;
+    }
+
+    .navigation {
+        font-size: 1.3em;
+        width: 90vw;
+    }
+
+    .produkte0 {
+        width: 90vw;
+    }
+
+    .produkte {
+        width: 90vw;
+        height: 30vh;
+    }
+
+    .produktInfo {
+        height: 25vh;
+        width: 50%;
+    }
+
+    .produktAnzahl {
+        height: 25vh;
+    }
+
+    .produktGesamtsumme {
+        height: 25vh;
+    }
+
+    .infoIMG {
+        height: 14vh;
+        width: 35%;
+    }
+
+    .infoH2 {
+        font-size: 1.6em;
+    }
+
+    .infoP {
+        font-size: 1.5em;
+        flex-direction: column;
+    }
+
+    .anzahlButton {
+        width: 40%;
+        height: 19%;
+    }
+
+    .minusBTN {
+        font-size: 0.9em;
+    }
+
+    #counter {
+        font-size: 1.5em;
+    }
+
+    .plusBTN {
+        font-size: 0.9em;
+    }
+
+    .müllEimer {
+        margin-left: 5px;
+        width: 20%;
+    }
+
+    #trashCan {
+        height: 60%;
+        width: 70%;
+    }
+
+    .svg {
+        height: 3em;
+        width: 3em;
+    }
+
+    .preis {
+        font-size: 1.5em;
+    }
+
+    .footer {
+        width: 90vw;
+    }
+
+    .checkoutWindow {
+        width: 90%;
+    }
+
+    .zwischensummenBOX {
+        font-size: 1.3em;
+    }
+
+    .zwischensummeINFO {
+        font-size: 0.9em;
+    }
+
+    .AGBButton {
+        height: 16%;
+    }
+
+    .label1 {
+        font-size: 1em;
+    }
+}
+
+/*----- MEDIA QUERRIES -----*/
+
+/* Media Query für Bildschirme unter 1025px */
+
+@media (max-width: 1025px) and (orientation: landscape) {
+    .infoIMG {
+        height: 26vh;
+    }
+
+    .infoH2 {
+        font-size: 1.3em;
+    }
+
+    .infoP {
+        font-size: 1.1em;
+    }
+
+    .anzahlButton {
+        height: 24%;
+    }
+
+    .müllEimer {
+        margin-left: 4px;
+        height: 25%;
+    }
+
+    .preis {
+        font-size: 1.1em;
+    }
+
+    .footer {
+        height: 55vh;
+    }
+
+    .AGBButton {
+        height: 20%;
+    }
+
+    .checkoutWindow {
+        width: 70%;
+    }
+
+    .checkBOX {
+        width: 70%;
+    }
+}
+
+/*----- MEDIA QUERRIES -----*/
+
+/* Media Query für Bildschirme unter 890px */
+
+@media (max-width: 890px) and (orientation: portrait) {
+    .warenkorbH1 {
+        font-size: 2em;
+    }
+
+    .weiterShoppen {
+        font-size: 1.1em;
+    }
+
+    .navigation {
+        font-size: 0.9em;
+    }
+
+    .infoTEXT {
+        height: 14.3vh;
+    }
+
+    .infoH2 {
+        font-size: 1.2em;
+    }
+
+    .infoP {
+        font-size: 1.1em;
+    }
+
+    .anzahlButton {
+        height: 17%;
+    }
+
+    .svg {
+        height: 2.1em;
+        width: 2.1em;
+    }
+
+    .minusBTN {
+        font-size: 0.8em;
+    }
+
+    #counter {
+        font-size: 1.2em;
+    }
+
+    .plusBTN {
+        font-size: 0.7em;
+    }
+
+    .preis {
+        font-size: 1.2em;
+    }
+
+    .zwischensummenBOX {
+        font-size: 1.1em;
+    }
+
+    .zwischensummeINFO {
+        font-size: 0.6em;
+    }
+
+    .checkBOX {
+        width: 70%;
+    }
+
+    .label1 {
+        font-size: 0.7em;
+    }
+
+    .auschecken2 {
+        height: 30%;
+    }
+
+    .paypal {
+        height: 30%;
+    }
+}
+
+/*----- MEDIA QUERRIES -----*/
+
+/* Media Query für Bildschirme unter 940px */
+
+@media (max-width: 940px) and (max-height: 433px) and (orientation: landscape) {
+    .header {
+        height: 20vh;
+    }
+
+    .produkte {
+        height: 45vh;
+    }
+
+    .produktInfo {
+        height: 34vh;
+    }
+
+    .infoIMG {
+        height: 33vh;
+    }
+
+    .anzahlButton {
+        height: 35%;
+    }
+
+    .müllEimer {
+        height: 37%;
+    }
+
+    .footer {
+        height: 80vh;
+    }
+
+    .zwischensummenBOX {
+        font-size: 0.86em;
+    }
+
+    .checkoutWindow {
+        width: 90%;
+    }
+}
+
+/*----- MEDIA QUERRIES -----*/
+
+/* Media Query für Bildschirme unter 940px */
+
+@media (max-width: 740px) and (orientation: landscape) {
+    .AGBButton {
+        width: 69%;
+    }
+
+    .auschecken1 {
+        width: 70%;
+    }
+
+    .zwischensummeINFO {
+        width: 90%;
+        font-size: 0.55em;
+    }
+}
+
+/*----- MEDIA QUERRIES -----*/
+
+/* Media Query für Bildschirme unter 640px */
+
+@media (max-width: 640px) and (orientation: portrait) {
+    .warenkorbH1 {
+        font-size: 1.8em;
+    }
+
+    .weiterShoppen {
+        font-size: 1em;
+    }
+
+    .infoH2 {
+        font-size: 1em;
+    }
+
+    .infoP {
+        font-size: 0.9em;
+    }
+
+    .anzahlButton {
+        height: 19%;
+    }
+
+    .AGBButton {
+        width: 70%;
+    }
+
+    .auschecken1 {
+        width: 71%;
+    }
+
+    .zwischensummeINFO {
+        width: 100%;
+        font-size: 0.5em;
+    }
+}
+/*----- MEDIA QUERRIES -----*/
+
+/* Media Query für Bildschirme unter 500px */
+
+@media (max-width: 500px) and (orientation: portrait) {
+    .warenkorbH1 {
+        font-size: 1.3em;
+    }
+
+    .weiterShoppen {
+        font-size: 0.8em;
+    }
+
+    .navigation {
+        font-size: 0.7em;
+    }
+
+    .anzahl {
+        font-size: 0.8em;
+        justify-content: flex-end;
+        margin-right: 2.3em;
+    }
+
+    .infoIMG {
+        height: 10vh;
+    }
+
+    .infoH2 {
+        font-size: 0.75em;
+    }
+
+    .infoP {
+        font-size: 0.9em;
+    }
+
+    .produktAnzahl {
+        justify-content: center;
+    }
+
+    .anzahlButton {
+        width: 45%;
+        height: 14%;
+    }
+
+    .müllEimer {
+        height: 8%;
+    }
+
+    .svg {
+        height: 1.7em;
+        width: 1.7em;
+    }
+
+    .minusBTN {
+        font-size: 0.65em;
+    }
+
+    #counter {
+        font-size: 1em;
+    }
+
+    .plusBTN {
+        font-size: 0.6em;
+    }
+
+    .produktGesamtsumme {
+        margin-top: 0.6em;
+    }
+
+    .preis {
+        font-size: 0.9em;
+        align-items: flex-start;
+    }
+
+    .zwischensummenBOX {
+        font-size: 0.8em;
+        width: 100%;
+    }
+
+    .zwischensummeINFO {
+        font-size: 0.5em;
+        width: 110%;
+    }
+
+    .AGBButton {
+        width: 100%;
+        height: 13%;
+    }
+
+    .auschecken1 {
+        width: 101%;
+    }
+
+    .auschecken1 {
+        margin-top: -0.4em;
+    }
+
+    .checkBOX {
+        width: 90%;
+    }
+
+    .auschecken2 {
+        height: 25%;
+    }
+
+    .paypal {
+        height: 25%;
+    }
+}
+
+/*----- MEDIA QUERRIES -----*/
+
+/* Media Query für Bildschirme unter 400px */
+
+@media (max-width: 400px) and (orientation: portrait) {
+    .warenkorbH1 {
+        font-size: 1.1em;
+    }
+
+    .weiterShoppen {
+        font-size: 0.7em;
+    }
+
+    .anzahl {
+        margin-right: 2.9em;
+    }
+
+    .infoH2 {
+        font-size: 0.85em;
+    }
+
+    .infoP {
+        font-size: 0.8em;
+    }
+
+    .produktAnzahl {
+        justify-content: flex-start;
+    }
+
+    .anzahlButton {
+        width: 45%;
+        height: 16%;
+    }
+    .auschecken2 {
+        font-size: 1em;
+    }
+
+    .infoIMG {
+        display: none;
+    }
+
+    .preis {
+        font-size: 0.8em;
+    }
+
+    .zwischensummeINFO {
+        font-size: 0.44em;
+        height: 4%;
+    }
+
+    .zwischensummenBOX {
+        font-size: 0.65em;
+    }
+}
+
+
 

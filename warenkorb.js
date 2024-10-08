@@ -99,7 +99,6 @@ function generiereProduktHTML(produkt) {
                     </svg>
                 </button>
             </div>
-     
         
         </div>
     
