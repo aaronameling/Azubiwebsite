@@ -103,7 +103,7 @@ function generiereProduktHTML(produkt) {
         </div>
     
         <div class="produktGesamtsumme">
-            <div id="preisPro" class="preis" data-initial-price="${produkt.preis.toFixed(2)}">€ ${(produkt.preis * produkt.menge).toFixed(2)}</div>
+            <div id="preisPro" class="preis" data-initial-price=${parseFloat(produkt.preis).toFixed(2)}>€ ${parseFloat(produkt.preis * produkt.menge).toFixed(2)}</div>
         </div>
     </div>
     `;
