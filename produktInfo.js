@@ -71,6 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const endDescriptionElement = document.querySelector('.beschreibungP3'); // Endbeschreibung (p3)
     const warenkorbBTN = document.getElementById('warenkorbBTN'); // Warenkorb Button
 
+
     const ausgewaehltesProdukt = JSON.parse(localStorage.getItem('ausgewaehltesProdukt'));
 
 
@@ -97,6 +98,7 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
         console.error("Keine Produktdaten im localStorage gefunden.");
     }
+
 
     // Warenkorb-Button Event-Listener
     warenkorbBTN.addEventListener('click', function(event) {

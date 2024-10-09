@@ -91,12 +91,9 @@ function saveProductDetails(event) {
     // Suche nach dem Produkt im products-Array
     const selectedProduct = products.find(product => product.id === productId);
 
-    // Speichere die relevanten Produktdetails im localStorage
+    // Speichere das gesamte Produkt als JSON-Objekt im `localStorage`
     if (selectedProduct) {
-        localStorage.setItem('selectedProductId', selectedProduct.id);
-        localStorage.setItem('selectedProductName', selectedProduct.name);
-        localStorage.setItem('selectedProductInfo', selectedProduct.info);
-        localStorage.setItem('selectedProductImg', selectedProduct.imgSrc);
+        localStorage.setItem('ausgewaehltesProdukt', JSON.stringify(selectedProduct));  // Speichere das gesamte Produkt als JSON-Objekt
     }
 
     // Weiterleitung zur Produkt-Detailseite
