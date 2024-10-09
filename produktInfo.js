@@ -37,14 +37,28 @@ document.addEventListener('DOMContentLoaded', function() {
     // Funktion zum Erhöhen des Zählers
     plusBtn.addEventListener('click', function() {
         let currentValue = parseInt(counter.textContent);
-        counter.textContent = currentValue + 1;
+        currentValue += 1;  // Erhöhe den Zähler um 1
+        counter.textContent = currentValue;  // Setze den neuen Wert im Counter an
+
+        // Aktualisiere die Menge im ausgewählten Produkt
+        if (ausgewaehltesProdukt) {
+            ausgewaehltesProdukt.menge = currentValue;
+            localStorage.setItem('ausgewaehltesProdukt', JSON.stringify(ausgewaehltesProdukt));  // Speichere aktualisierte Menge
+        }
     });
 
     // Funktion zum Verringern des Zählers
     minusBtn.addEventListener('click', function() {
         let currentValue = parseInt(counter.textContent);
-        if (currentValue > 0) { // Optional: Verhindert, dass der Zähler unter 0 fällt
-            counter.textContent = currentValue - 1;
+        if (currentValue > 1) {  // Verhindere, dass der Zähler unter 1 fällt
+            currentValue -= 1;  // Verringere den Zähler um 1
+            counter.textContent = currentValue;
+
+            // Aktualisiere die Menge im ausgewählten Produkt
+            if (ausgewaehltesProdukt) {
+                ausgewaehltesProdukt.menge = currentValue;
+                localStorage.setItem('ausgewaehltesProdukt', JSON.stringify(ausgewaehltesProdukt));  // Speichere aktualisierte Menge
+            }
         }
     });
 
@@ -58,6 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const warenkorbBTN = document.getElementById('warenkorbBTN'); // Warenkorb Button
 
     const ausgewaehltesProdukt = JSON.parse(localStorage.getItem('ausgewaehltesProdukt'));
+
 
     if (ausgewaehltesProdukt) {
         imgElement.src = ausgewaehltesProdukt.bild;
@@ -86,6 +101,17 @@ document.addEventListener('DOMContentLoaded', function() {
     // Warenkorb-Button Event-Listener
     warenkorbBTN.addEventListener('click', function(event) {
         event.preventDefault();
+
+        // Aktuelle Zahl aus dem Counter übernehmen und speichern
+        const currentMenge = parseInt(counter.textContent);  // Menge aus Counter übernehmen
+
+        // Hinzufügen der Menge zum Produktobjekt
+        ausgewaehltesProdukt.menge = currentMenge;  // Menge zum Produktobjekt hinzufügen
+
+        console.log("Produkt mit Menge zum Warenkorb hinzugefügt:", ausgewaehltesProdukt);
+
+        // Produkt im localStorage aktualisieren mit der richtigen Menge
+        localStorage.setItem('ausgewaehltesProdukt', JSON.stringify(ausgewaehltesProdukt));  // Produkt mit aktualisierter Menge speichern
 
         localStorage.setItem('produktHinzugefuegt', 'true');
         window.location.href = "warenkorb.html";

@@ -85,7 +85,7 @@ function generiereProduktHTML(produkt) {
                 <div class="minusBTN">
                     <button id="minusBTN">-</button>
                 </div>
-                <p id="counter">${produkt.menge}</p>
+                <p id="counter">${produkt.menge || 1}</p>
                 <div class="plusBTN">
                     <button id="plusBTN">+</button>
                 </div>
@@ -208,7 +208,7 @@ function ladeProduktInContainer() {
 
         if (!produktExistiert) {
             // Produkt zum Warenkorb hinzufügen und im LocalStorage speichern
-            ausgewaehltesProdukt.menge = 1;
+            ausgewaehltesProdukt.menge = ausgewaehltesProdukt.menge || 1;
             warenkorb.push(ausgewaehltesProdukt);
             localStorage.setItem('warenkorb', JSON.stringify(warenkorb));
         }

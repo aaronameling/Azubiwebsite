@@ -224,6 +224,7 @@ body {
     color: #234412;
     background-color: rgba(255, 247, 175, 0);
     border-radius: 0.25em;
+    cursor: pointer;
 }
 
 #counter {
@@ -252,6 +253,7 @@ body {
     color: #234412;
     background-color: rgba(255, 247, 175, 0);
     border-radius: 0.25em;
+    cursor: pointer;
 }
 
 .checkoutButton {
