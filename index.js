@@ -37,17 +37,17 @@ const products = [
         id: "shiny-glurak-kuscheltier",
         typ: "Feuer Flug",
         name: "Shiny Glurak Kuscheltier",
-        preis: "19.99",
+        preis: 19.99,
         info: "19,99€ (inkl.MwSt.)",
-        imgSrc: "img/ShinyGlurak.png"
+        bild: "img/ShinyGlurak.png"
     },
     {
         id: "rayquaza-actionfigur",
         typ: "Drache Flug",
         name: "Rayquaza Actionfigur",
-        preis: "49.99",
+        preis: 49.99,
         info: "49,99€ (inkl.MwSt.)",
-        imgSrc: "img/Rayquaza Actionfigur.png"
+        bild: "img/Rayquaza Actionfigur.png"
     }
 ];
 
@@ -63,7 +63,7 @@ function createProductItem(product) {
     productDiv.setAttribute('data-typ', product.typ)
 
     productDiv.innerHTML = `
-        <img class="produkt-img" src="${product.imgSrc}" alt="${product.name} Produkt IMG">
+        <img class="produkt-img" src="${product.bild}" alt="${product.name} Produkt IMG">
         <div class="imgBox-underline"></div>
         <h2 class="produkt-name">${product.name}</h2>
         <span class="produkt-info-box">
@@ -93,7 +93,13 @@ function saveProductDetails(event) {
 
     // Speichere das gesamte Produkt als JSON-Objekt im `localStorage`
     if (selectedProduct) {
-        localStorage.setItem('ausgewaehltesProdukt', JSON.stringify(selectedProduct));  // Speichere das gesamte Produkt als JSON-Objekt
+        const ausgewaehltesProdukt = {
+            id: selectedProduct.id,
+            name: selectedProduct.name,
+            preis: selectedProduct.preis,
+            bild: selectedProduct.bild  // Speichere `bild` statt `imgSrc`
+        };
+        localStorage.setItem('ausgewaehltesProdukt', JSON.stringify(ausgewaehltesProdukt));  // Speichere das gesamte Produkt als JSON-Objekt
     }
 
     // Weiterleitung zur Produkt-Detailseite
